@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+#container {
+    max-width: 100%;
+    margin: 150px auto;
+  }
+
+#dw-container,.container-flex{
+    display: flex;
+}
+
+.heading{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-column-gap: 4px;
+    width: 55%;
+}
+
+select{
+    height: 20px;
+    width: 100px;
+    max-width: 100px;
+}
+
+input{
+    height: 13px;
+    width: 100px;
+    max-width: 100px;
+}
+
+.district_basset{
+    position: relative;
+    margin-top: -178px;
+}
+
+/* For laptops and larger screens */
+@media (min-width: 720px) {
+    #container {
+      margin: 150px 20%;
+    }
+  }
+  
+  /* For HD screens */
+  @media (min-width: 1920px) {
+    #container {
+      margin: 150px 30%;
+    }
+
+    .heading{
+        max-width:86%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
