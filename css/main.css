@@ -11,17 +11,16 @@ body{
   --black--colour: #0D0D0D;
 }
 
-.container{
+#hero-container{
   max-width: 100%;
 }
 
 #navbar{
-  
-  width: 100%;
+  max-width: 100%;
   background-color: #0D0D0D;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap:65rem;
+  grid-gap:60%;
 }
 
 #navbar img{
@@ -44,14 +43,45 @@ body{
 }
 
 #hero-image{
+  max-width: 100%;
   margin-top: -10rem;
+  overflow: hidden;
 }
 
 #hero-image img{
   z-index: -1;
   position: absolute;
   width: 100%;
-  height: 60vh;
-  object-fit: cover;
+  height:100%;
+  object-fit:none;
 }
 
+.basset-cars{
+  display: none;
+}
+
+#btn{
+  padding-top:34rem;
+  margin:1rem;
+}
+
+button{
+  height: 3vh;
+  width: 7vw;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--Blue--colour);
+  color: var(--white--colour);
+}
+
+#options-header{
+  background-color: var(--black--colour);
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  text-align: center;
+}
+
+#options-header p{
+  color:var(--Green--colour);
+}
