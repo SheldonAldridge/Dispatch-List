@@ -10,7 +10,8 @@ let cbarBtn = document.querySelector(".cbar");
 let cbarCarList = document.querySelector(".cbar-cars-list");
 let cbarCar = document.querySelector(".cbar-cars"); // Image
 
-bassetBtn.addEventListener('click', () => {
+bassetBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     districtCarList.style.display = "none";
     districtCar.style.display = "none";
 
@@ -25,7 +26,8 @@ bassetBtn.addEventListener('click', () => {
     bassetBtn.style.backgroundColor = "#F26835";
 })
 
-districtBtn.addEventListener('click', () => {
+districtBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     districtCarList.style.display = "block";
     districtCar.style.display = "block";
 
