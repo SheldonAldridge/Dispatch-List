@@ -1,74 +1,75 @@
-body{
+body {
   margin: 0;
   box-sizing: border-box;
 }
 
-:root{
-  --Blue--colour: #3264A6;
-  --Green--colour: #0DF205;
-  --Green--colour: #0DF205;
-  --white--colour: #FFFFFF;
-  --black--colour: #0D0D0D;
+:root {
+  --Blue--colour: #3264a6;
+  --Green--colour: #0df205;
+  --Green--colour: #0df205;
+  --white--colour: #ffffff;
+  --black--colour: #0d0d0d;
 }
 
-#hero-container{
+#hero-container {
   max-width: 100%;
   position: relative;
 }
 
-#navbar{
+#navbar {
   max-width: 100%;
-  background-color: #0D0D0D;
+  background-color: #0d0d0d;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-#navbar img{
+#navbar img {
   width: 20%;
   height: auto;
   margin: auto 10px;
 }
 
-.nav-item{
+.nav-item {
   margin: 2rem auto;
 }
 
-.nav-item a{
+.nav-item a {
   font-size: 20px;
- text-decoration: none;
- color: var(--Green--colour);
+  text-decoration: none;
+  color: var(--Green--colour);
 }
 
-.tech-site{
+.tech-site {
   padding-left: 1rem;
 }
 
-#hero-image{
+#hero-image {
   margin-top: -10rem;
 }
 
-#hero-image img{
+#hero-image img {
   max-width: 100%;
   z-index: -1;
   position: absolute;
-  object-fit:cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
 }
 
-.basset-cars,.cbar-cars{
+.basset-cars,
+.cbar-cars {
   display: none;
 }
 
-#btn{
-  padding-top:34rem;
-  margin:1rem;
-  
+#btn {
+  padding-top: 34rem;
+  margin: 1rem;
 }
 
-button{
-  height: 3vh;
-  width: 7vw;
+button {
+  max-width: 100%;
+  height: 4vh;
+  width: 10%;
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -77,26 +78,28 @@ button{
   font-size: 16px;
 }
 
-#options-header{
+#options-header {
   margin-top: 2.25rem;
   background-color: var(--black--colour);
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   text-align: center;
   font-size: 25px;
 }
 
-#options-header p{
-  color:var(--Green--colour);
+#options-header p {
+  color: var(--Green--colour);
 }
 
-#district-car-options{
+#district-car-options,
+#basset-car-options,
+#cbar-car-options {
   display: flex;
   justify-content: space-between;
 }
 
-#district-car-options select, 
-#district-car-options input{
+#district-car-options select,
+#district-car-options input {
   flex-grow: 1;
   width: 100%;
   max-width: 100%;
@@ -104,13 +107,85 @@ button{
   height: 5vh;
   background-color: var(--Blue--colour);
   border: none;
-  box-shadow: 3px 1px 7px 1px rgba(0,0,0,0.75);
+  box-shadow: 3px 1px 7px 1px rgba(0, 0, 0, 0.75);
   color: var(--white--colour);
   text-align: center;
-  padding:10px;
+  padding: 10px;
 }
 
-#district-selection,.district-driver,
-#district-area1,#district-area2{
+#basset-car-options select,
+#basset-car-options input {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  height: 5vh;
+  background-color: #f26835;
+  border: none;
+  box-shadow: 3px 1px 7px 1px rgba(0, 0, 0, 0.75);
+  color: var(--white--colour);
+  text-align: center;
+  padding: 10px;
+}
+
+#cbar-car-options select,
+#cbar-car-options input {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  height: 5vh;
+  background-color: #db2304;
+  border: none;
+  box-shadow: 3px 1px 7px 1px rgba(0, 0, 0, 0.75);
+  color: var(--white--colour);
+  text-align: center;
+  padding: 10px;
+}
+
+.basset-cars-list,
+.cbar-cars-list {
+  display: none;
+}
+
+#district-selection,
+.district-driver,
+#district-area1,
+#district-area2,
+#basset-selection,
+.basset-driver,
+#basset-area1,
+#basset-area2,
+#cbar-selection,
+#cbar-driver,
+#cbar-area1,
+#cbar-area2 {
   font-size: 20px;
+}
+
+/* Media query for desktop screens */
+@media (min-width: 1200px) {
+  #district-car-options select,
+  #district-car-options input,
+  #basset-car-options select,
+  #basset-car-options input,
+  #cbar-car-options select,
+  #cbar-car-options input {
+    height: 6vh;
+  }
+}
+
+#district-selection,
+.district-driver,
+#district-area1,
+#district-area2,
+#basset-selection,
+.basset-driver,
+#basset-area1,
+#basset-area2,
+#cbar-selection,
+#cbar-driver,
+#cbar-area1,
+#cbar-area2 {
+  font-size: 16px;
 }
