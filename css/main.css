@@ -22,182 +22,55 @@ body {
 #navbar {
   max-width: 100%;
   background-color: #0d0d0d;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
 }
 
 #navbar img {
-  width: 20%;
-  height: auto;
-  margin: auto 10px;
-}
-
-.nav-item {
-  margin: 2rem auto;
-}
-
-.nav-item a {
-  font-size: 20px;
-  text-decoration: none;
-  color: var(--Green--colour);
-}
-
-.tech-site {
-  padding-left: 1rem;
-}
-
-#hero-image {
-  margin-top: -10rem;
-}
-
-#hero-image img {
   max-width: 100%;
-  z-index: -1;
-  position: absolute;
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.basset-cars,
-.cbar-cars {
-  display: none;
-}
-
-#btn {
-  padding-top: 34rem;
-  margin: 1rem;
-}
-
-button {
-  max-width: 100%;
-  height: 4vh;
   width: 10%;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  background-color: var(--Blue--colour);
-  color: var(--white--colour);
-  font-size: 16px;
+  padding: 10px;
 }
 
-#options-header {
-  margin-top: 2.25rem;
-  background-color: var(--black--colour);
+.nav-heading{
+  color:white;
+  text-align: center;
+  width: 100%;
+}
+
+#arcompanies-container{
+  max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  text-align: center;
-  font-size: 25px;
+  grid-template-columns: repeat(4,1fr);
 }
 
-#options-header p {
-  color: var(--Green--colour);
+.dw-name{
+  width: auto;
+  height: auto;
+  background-color: #00bbff;
 }
 
-#district-car-options,
-#basset-car-options,
-#cbar-car-options {
-  display: flex;
-  justify-content: space-between;
+.dw-areas,.db-areas,.cbar-areas{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 5%;
 }
 
-#district-car-options select,
-#district-car-options input {
-  flex-grow: 1;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  height: 5vh;
-  background-color: var(--Blue--colour);
-  border: none;
-  box-shadow: 3px 1px 7px 1px rgba(0, 0, 0, 0.75);
-  color: var(--white--colour);
-  text-align: center;
-  padding: 10px;
+.areadw,.areadb,.areacbar{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
 
-#basset-car-options select,
-#basset-car-options input {
-  flex-grow: 1;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  height: 5vh;
-  background-color: #f26835;
-  border: none;
-  box-shadow: 3px 1px 7px 1px rgba(0, 0, 0, 0.75);
-  color: var(--white--colour);
-  text-align: center;
-  padding: 10px;
+#dw-area-0-1,#dw-area-1-1,#dw-area-2-1,#dw-area-3-1,#dw-area-4-1,
+#dw-area-5-1,#dw-area-0-2,#dw-area-1-2,#dw-area-2-2,#dw-area-3-2,#dw-area-4-2,#dw-area-5-2,
+#dw-cars-0,#dw-cars-1,#dw-cars-2,#dw-cars-3,#dw-cars-4,#dw-cars-5
+{
+  height: auto;
+  font-size: large;
 }
 
-#district-area1{
-  width: 10vw;
-}
 
-#cbar-car-options select,
-#cbar-car-options input {
-  flex-grow: 1;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  height: 5vh;
-  background-color: #db2304;
-  border: none;
-  box-shadow: 3px 1px 7px 1px rgba(0, 0, 0, 0.75);
-  color: var(--white--colour);
-  text-align: center;
-  padding: 10px;
-}
 
-.basset-cars-list,
-.cbar-cars-list {
-  display: none;
-}
 
-#district-selection,
-.district-driver,
-#district-area1,
-#district-area2,
-#district-area3,
-#basset-selection,
-.basset-driver,
-#basset-area1,
-#basset-area2,
-#cbar-selection,
-#cbar-driver,
-#cbar-area1,
-#cbar-area2 {
-  font-size: 20px;
-}
-
-/* Media query for desktop screens */
-@media (min-width: 1200px) {
-  #district-car-options select,
-  #district-car-options input,
-  #basset-car-options select,
-  #basset-car-options input,
-  #cbar-car-options select,
-  #cbar-car-options input {
-    height: 6vh;
-  }
-
-#district-selection,
-.district-driver,
-#district-area1,
-#district-area2,
-#basset-selection,
-.basset-driver,
-#basset-area1,
-#basset-area2,
-#cbar-selection,
-#cbar-driver,
-#cbar-area1,
-#cbar-area2 {
-  font-size: 16px;
-}
-
-}
 
 
 
