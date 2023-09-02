@@ -168,14 +168,36 @@ width:19.28vw;
 }
 
 .reminders{
-  transition: opacity 0.5s ease-in-out;
+  animation: animateReminder 1800 infinite linear;
+  font-size: 20px;
+  padding-top:15px;
 }
 
-.animate{
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+@keyframes animateReminder  {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity:0;
+  }
 }
 
+
+@media screen and (min-width: 1280px) {
+  
+
+#dw-cars, #db-cars, #cbar-cars, #vig-cars {
+  width: 14.72vw;
+}
+
+#dw-area,#db-area,#cbar-area,#vig-area{
+  width: 5vw;
+}
+
+}
 
 
 

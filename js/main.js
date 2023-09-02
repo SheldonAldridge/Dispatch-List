@@ -8,8 +8,14 @@ for (let i = 0; i < 19; i++) {
     const dwAreaDiv = document.createElement('div');
     dwAreaDiv.classList.add('dw-area-one');
 
+    const dwplaceholderOne = document.createAttribute('placeholder')
+    dwplaceholderOne.textContent = 'Area 1'
+
     const dwAreaTwoDiv = document.createElement('div');
     dwAreaTwoDiv.classList.add('dw-area-two');
+
+    const dwplaceholderTwo = document.createAttribute('placeholder')
+    dwplaceholderTwo.textContent = 'Area 2'
 
     const selectElement1 = document.createElement('select');
     selectElement1.name = `dw-area`;
@@ -295,24 +301,4 @@ for (let i = 0; i < 19; i++){
     vigcarsContainer.appendChild(selectElement);
 }
 
-const notes = [
-'Do not forget to read your notes first before attending an alarm',
-'Do not forget to acknowledge alarms under 10 seconds', 
-'Do not forget to dispatch Panics first']
-
-function randomizeAndAnimateText() {
-    const randomIndex = Math.floor(Math.random() * notes.length);
-    const randomNote = notes[randomIndex];
-    const remindersContainer = document.querySelector('.reminders');
-
-
-    remindersContainer.classList.add('animate');
-
-
-    remindersContainer.textContent = randomNote;
-
-    setInterval(randomizeAndAnimateText, 5000);
-}
-
-randomizeAndAnimateText();
 
