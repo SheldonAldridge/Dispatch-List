@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'PT Sans', sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 :root {
-  --Blue--colour: #3264a6;
+  --Blue--colour: #3264a6b6;
   --Green--colour: #0df205;
   --Green--colour: #0df205;
   --white--colour: #ffffff;
-  --black--colour: #0d0d0d;
+  --black--colour: #0d0d0de1;
+  --orange--colour: #d85521af;
+  --red--colour: #b31111b3;
+  --lightBlue--colour: #7ba9e6b8;
 }
 
 #hero-container {
@@ -41,32 +43,141 @@ body {
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(4,1fr);
+  
 }
 
-.dw-name{
-  width: auto;
-  height: auto;
-  background-color: #00bbff;
+.dw-name,.db-name,.cbar-name,.vig-name{
+  text-align: center;
+  height:85px;
 }
 
-.dw-areas,.db-areas,.cbar-areas{
+/*District Watch style*/
+.dw-name,#dw-cars{
+  background-color: var(--Blue--colour);
+  color: var(--white--colour);
+  border-top: transparent;
+  border-right: transparent;
+  border-bottom:1px solid var(--white--colour);
+}
+
+#dw-cars,#dw-area,#db-cars,#db-area,#cbar-cars,#cbar-area,#vig-cars,
+#vig-area{
+  height:5vh;
+  font-size:20px;
+  text-align: center;
+  width: 2.84vw;
+}
+
+#dw-cars,#vig-cars{
+max-width: 100%;
+width:19vw;
+}
+
+#db-cars,#cbar-cars{
+max-width: 100%;
+width:19.28vw;
+}
+
+#dw-area{
+  background-color: var(--black--colour);
+  color: var(--white--colour);
+  border-top: transparent;
+  border-left: transparent;
+  border-bottom:1px solid var(--white--colour);
+}
+/*District Watch style*/
+
+/*District Basset style*/
+.db-name,#db-cars{
+  background-color: var(--orange--colour);
+  color: var(--white--colour);
+  border-top: transparent;
+  border-bottom:1px solid var(--white--colour);
+}
+
+#db-area{
+  background-color: var(--black--colour);
+  color: var(--white--colour);
+  border-top: transparent;
+  border-bottom:1px solid var(--white--colour);
+}
+
+.dw-areas,.db-areas,.vig-areas{
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  width: 5%;
+  max-width: 35%;
+}
+/*District Basset style*/
+
+/*Cbar style*/
+.cbar-name,#cbar-cars{
+  background-color: var(--red--colour);
+  color: var(--white--colour);
+  border-top: transparent;
+  border-bottom:1px solid var(--white--colour);
 }
 
-.areadw,.areadb,.areacbar{
+#cbar-area{
+  background-color: var(--black--colour);
+  color: var(--white--colour);
+  border-top: transparent;
+  border-bottom:1px solid var(--white--colour);
+}
+/*CBAR style*/
+
+/*Vigilant style*/
+.vig-name,#vig-cars{
+  background-color: var(--lightBlue--colour);
+  color: var(--white--colour);
+  border-top: transparent;
+  border-bottom:1px solid var(--white--colour);
+}
+
+#vig-area{
+  background-color: var(--black--colour);
+  color: var(--white--colour);
+  border-top: transparent;
+  border-bottom:1px solid var(--white--colour);
+}
+/*Vigilant style*/
+
+
+.dw-areas,.db-areas,.vig-areas{
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  max-width: 35%;
 }
 
-#dw-area-0-1,#dw-area-1-1,#dw-area-2-1,#dw-area-3-1,#dw-area-4-1,
-#dw-area-5-1,#dw-area-0-2,#dw-area-1-2,#dw-area-2-2,#dw-area-3-2,#dw-area-4-2,#dw-area-5-2,
-#dw-cars-0,#dw-cars-1,#dw-cars-2,#dw-cars-3,#dw-cars-4,#dw-cars-5
-{
-  height: auto;
-  font-size: large;
+.cbar-areas{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  max-width: 43%;
 }
+
+.pair-div{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  max-width: 28%;
+}
+
+.dw-logo img,.db-logo img{
+  margin-top: 13px;
+  object-fit: contain;
+  height: 21vh;
+  max-width: 100%;
+}
+
+.reminders{
+  transition: opacity 0.5s ease-in-out;
+}
+
+.animate{
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+
 
 
 

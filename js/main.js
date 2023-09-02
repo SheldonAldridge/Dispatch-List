@@ -4,7 +4,7 @@ const dwAreasContainer = document.querySelector('.areadw');
 const optionValues = ['DW1', 'DW2', 'DW3', 'DW4', 'DW5', 'DW6'];
 
 
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 19; i++) {
     const dwAreaDiv = document.createElement('div');
     dwAreaDiv.classList.add('dw-area-one');
 
@@ -12,12 +12,12 @@ for (let i = 0; i < 6; i++) {
     dwAreaTwoDiv.classList.add('dw-area-two');
 
     const selectElement1 = document.createElement('select');
-    selectElement1.name = `dw-area-${i}-1`;
-    selectElement1.id = `dw-area-${i}-1`;
+    selectElement1.name = `dw-area`;
+    selectElement1.id = `dw-area`;
 
     const selectElement2 = document.createElement('select');
-    selectElement2.name = `dw-area-${i}-2`;
-    selectElement2.id = `dw-area-${i}-2`;
+    selectElement2.name = `dw-area`;
+    selectElement2.id = `dw-area`;
 
     const defaultOption = document.createElement('option');
     defaultOption.value = '';
@@ -46,17 +46,17 @@ for (let i = 0; i < 6; i++) {
     dwAreasContainer.appendChild(pairDiv);
 }
 
-const optionCarValues = ['RR1', 'RR2', 'RR3', 'RR4', 'RR5', 'RR6','RR7','RR8','RR9','RR10','RR11','RR12'];
+const optionCarValues = ['RR01', 'RR02', 'RR03', 'RR04', 'RR05', 'RR06','RR07','RR08','RR09','RR10','RR11','RR12'];
 
 const dwCarsContainer = document.querySelector('.dw-cars');
 
-for (let i = 0; i < 6; i++){
+for (let i = 0; i < 19; i++){
     const dwcarsdiv = document.createElement('div');
     dwcarsdiv.classList.add('dw-cars');
 
     const selectElement = document.createElement('select');
-    selectElement.name = `dw-cars-${i}`;
-    selectElement.id = `dw-cars-${i}`;
+    selectElement.name = `dw-cars`;
+    selectElement.id = `dw-cars`;
 
     const defaultOption = document.createElement('option');
     defaultOption.value = '';
@@ -79,7 +79,7 @@ const dbAreasContainer = document.querySelector('.areadb');
 const optionDBArea = ['DB1', 'DB2', 'DB3', 'DB4', 'DB5', 'DB6','DB7',
 'DB8'];
 
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 19; i++) {
     const dwAreaDiv = document.createElement('div');
     dwAreaDiv.classList.add('db-area-one');
 
@@ -87,12 +87,12 @@ for (let i = 0; i < 8; i++) {
     dwAreaTwoDiv.classList.add('db-area-two');
 
     const selectElement1 = document.createElement('select');
-    selectElement1.name = `db-area-${i}-1`;
-    selectElement1.id = `db-area-${i}-1`;
+    selectElement1.name = `db-area`;
+    selectElement1.id = `db-area`;
 
     const selectElement2 = document.createElement('select');
-    selectElement2.name = `db-area-${i}-2`;
-    selectElement2.id = `db-area-${i}-2`;
+    selectElement2.name = `db-area`;
+    selectElement2.id = `db-area`;
 
     const defaultOption = document.createElement('option');
     defaultOption.value = ' ';
@@ -123,16 +123,16 @@ for (let i = 0; i < 8; i++) {
 
 const dbcarsContainer = document.querySelector('.db-cars');
 
-const optionDBCars = ['BR1', 'BR2', 'BR3', 'BR4', 'BR5', 'BR6','BR7',
-'BR8','BR9','BR10','BR11'];
+const optionDBCars = ['BR01', 'BR02', 'BR03', 'BR04', 'BR05', 'BR06','BR07',
+'BR08','BR09','BR10','BR11'];
 
-for (let i = 0; i < 8; i++){
+for (let i = 0; i < 19; i++){
     const dwcarsdiv = document.createElement('div');
     dwcarsdiv.classList.add('db-cars');
 
     const selectElement = document.createElement('select');
-    selectElement.name = `db-cars-${i}`;
-    selectElement.id = `db-cars-${i}`;
+    selectElement.name = `db-cars`;
+    selectElement.id = `db-cars`;
 
     const defaultOption = document.createElement('option');
     defaultOption.value = '';
@@ -155,7 +155,7 @@ const cbarAreasContainer = document.querySelector('.areacbar');
 const optionCBARArea = ['A01', 'A02', 'A03', 'A04', 'A05', 'A06','A07',
 'A08','A09','A10','A11','A12','A13'];
 
-for (let i = 0; i < 13; i++) {
+for (let i = 0; i < 19; i++) {
     const cbarAreaDiv = document.createElement('div');
     cbarAreaDiv.classList.add('cbar-area-one');
 
@@ -163,12 +163,12 @@ for (let i = 0; i < 13; i++) {
     cbarAreaTwoDiv.classList.add('cbar-area-two');
 
     const selectElement1 = document.createElement('select');
-    selectElement1.name = `cbar-area-${i}-1`;
-    selectElement1.id = `cbar-area-${i}-1`;
+    selectElement1.name = `cbar-area`;
+    selectElement1.id = `cbar-area`;
 
     const selectElement2 = document.createElement('select');
-    selectElement2.name = `cbar-area-${i}-2`;
-    selectElement2.id = `cbar-area-${i}-2`;
+    selectElement2.name = `cbar-area`;
+    selectElement2.id = `cbar-area`;
 
     const defaultOption = document.createElement('option');
     defaultOption.value = ' ';
@@ -199,13 +199,13 @@ const CbarcarsContainer = document.querySelector('.cbar-cars');
 
 const optionCBARCars = ['R43', 'R44', 'R45', 'R46', 'R47'];
 
-for (let i = 0; i < 13; i++){
+for (let i = 0; i < 19; i++){
     const cbarcarsdiv = document.createElement('div');
     cbarcarsdiv.classList.add('db-cars');
 
     const selectElement = document.createElement('select');
-    selectElement.name = `cbar-cars-${i}`;
-    selectElement.id = `cbar-cars-${i}`;
+    selectElement.name = `cbar-cars`;
+    selectElement.id = `cbar-cars`;
 
     const defaultOption = document.createElement('option');
     defaultOption.value = '';
@@ -222,7 +222,97 @@ for (let i = 0; i < 13; i++){
     CbarcarsContainer.appendChild(selectElement);
 }
 
-const optionVigArea = ['', 'A02', 'A03', 'A04', 'A05', 'A06','A07',
-'A08','A09','A10','A11','A12','A13'];
+/*Vigilant*/
+const vigAreasContainer = document.querySelector('.areavig');
 
-const optionCBVigCars = ['R43', 'R44', 'R45', 'R46', 'R47'];
+const optionVigArea = ['BEL', 'BLU', 'BRA', 'DUR', 'HIL', 'KLP','KRA',
+'KUI','PIN','SEA','STE','STR','V1A','V1B','V1C', 'V1D', 'V1E'];
+
+for (let i = 0; i < 19; i++) {
+    const vigAreaDiv = document.createElement('div');
+    vigAreaDiv.classList.add('vig-area-one');
+
+    const vigAreaTwoDiv = document.createElement('div');
+    vigAreaTwoDiv.classList.add('vig-area-two');
+
+    const selectElement1 = document.createElement('select');
+    selectElement1.name = `vig-area`;
+    selectElement1.id = `vig-area`;
+
+    const selectElement2 = document.createElement('select');
+    selectElement2.name = `vig-area`;
+    selectElement2.id = `vig-area`;
+
+    const defaultOption = document.createElement('option');
+    defaultOption.value = ' ';
+    defaultOption.textContent = ' ';
+    selectElement1.appendChild(defaultOption.cloneNode(true));
+    selectElement2.appendChild(defaultOption.cloneNode(true));
+
+    for (const value of optionVigArea) {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        selectElement1.appendChild(option);
+        selectElement2.appendChild(option.cloneNode(true));
+    }
+
+    vigAreaDiv.appendChild(selectElement1)
+    vigAreaTwoDiv.appendChild(selectElement2)
+
+    const pairDiv = document.createElement('div');
+    pairDiv.classList.add('pair-div')
+    pairDiv.appendChild(vigAreaDiv);
+    pairDiv.appendChild(vigAreaTwoDiv);
+
+    vigAreasContainer.appendChild(pairDiv);
+}
+
+const vigcarsContainer = document.querySelector('.vig-cars');
+
+const optionVigCars = ['R01','R02', 'R03','R04','R05','R06'];
+
+for (let i = 0; i < 19; i++){
+    const vigcarsdiv = document.createElement('div');
+    vigcarsdiv.classList.add('vig-cars');
+
+    const selectElement = document.createElement('select');
+    selectElement.name = `vig-cars`;
+    selectElement.id = `vig-cars`;
+
+    const defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.textContent = '';
+    selectElement.appendChild(defaultOption);
+
+    for (const value of optionVigCars){
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        selectElement.appendChild(option);
+    }
+
+    vigcarsContainer.appendChild(selectElement);
+}
+
+const notes = [
+'Do not forget to read your notes first before attending an alarm',
+'Do not forget to acknowledge alarms under 10 seconds', 
+'Do not forget to dispatch Panics first']
+
+function randomizeAndAnimateText() {
+    const randomIndex = Math.floor(Math.random() * notes.length);
+    const randomNote = notes[randomIndex];
+    const remindersContainer = document.querySelector('.reminders');
+
+
+    remindersContainer.classList.add('animate');
+
+
+    remindersContainer.textContent = randomNote;
+
+    setInterval(randomizeAndAnimateText, 5000);
+}
+
+randomizeAndAnimateText();
+
