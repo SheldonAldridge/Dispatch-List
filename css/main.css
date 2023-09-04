@@ -94,7 +94,6 @@ body {
   border-color: var(--white--colour);
   text-align: center;
   font-size: 25px;
-  
 }
 
 .db-area-one,.cbar-area-one,.vig-area-one{
@@ -153,6 +152,84 @@ select{
   width: 5vw;
 }
 
+@media (max-width: 1920px) {
+
+  .dw-name,.db-name ,.cbar-name,.vig-name{
+    width:25%;
+  }
+
+  .dw-areas select,.db-areas select,.cbar-areas select,.vig-areas select{
+    width:7.9rem;
+    font-size: 20px;
+  }
+
+  #powered-by{
+    padding-left: 1rem;
+  }
+ 
+}
+
+@media (max-width: 1280px) {
+
+  #navbar h1 {
+    font-size:15px;
+  }
+
+   #powered-by {
+    font-size:10px !important;
+  }
+
+  .dw-name,.db-name ,.cbar-name,.vig-name{
+    width:25%;
+    height: 4rem;
+  }
+
+  .dw-name h1,.db-name h1,.cbar-name h1,.vig-name h1{
+    font-size:25px;
+  }
+
+  .dw-areas select,.db-areas select,.cbar-areas select,.vig-areas select{
+    width:6.55rem;
+    font-size: 13px;
+    height: 2.6rem;
+  }
+
+  #powered-by{
+    padding-left: 1rem;
+  }
+ 
+}
+
+@media (max-width: 1024px) {
+
+  #navbar h1 {
+    font-size:15px;
+  }
+
+   #powered-by {
+    font-size:10px !important;
+  }
+
+  .dw-name,.db-name ,.cbar-name,.vig-name{
+    width:25%;
+    height: 4rem;
+  }
+
+  .dw-name h1,.db-name h1,.cbar-name h1,.vig-name h1{
+    font-size:25px;
+  }
+
+  .dw-areas select,.db-areas select,.cbar-areas select,.vig-areas select{
+    width:5.2rem;
+    font-size: 13px;
+    height: 2.6rem;
+  }
+
+  #powered-by{
+    padding-left: 1rem;
+  }
+ 
+}
 
 
 
