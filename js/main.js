@@ -4,7 +4,7 @@ const dwAreasContainer = document.querySelector('.areadw');
 const optionValues = ['DW1', 'DW2', 'DW3', 'DW4', 'DW5', 'DW6'];
 
 
-for (let i = 0; i < 19; i++) {
+for (let i = 0; i < 13; i++) {
     const dwAreaDiv = document.createElement('div');
     dwAreaDiv.classList.add('dw-area-one');
 
@@ -52,11 +52,12 @@ for (let i = 0; i < 19; i++) {
     dwAreasContainer.appendChild(pairDiv);
 }
 
-const optionCarValues = ['RR01', 'RR02', 'RR03', 'RR04', 'RR05', 'RR06','RR07','RR08','RR09','RR10','RR11','RR12'];
+const optionCarValues = ['Romeo 01', 'Romeo 02', 'Romeo 03', 'Romeo 04', 'Romeo 05',
+ 'Romeo 06','Romeo 07','Romeo 08','Romeo 09','Romeo 10','Romeo 11','Romeo 12'];
 
 const dwCarsContainer = document.querySelector('.dw-cars');
 
-for (let i = 0; i < 19; i++){
+for (let i = 0; i < 13; i++){
     const dwcarsdiv = document.createElement('div');
     dwcarsdiv.classList.add('dw-cars');
 
@@ -85,7 +86,7 @@ const dbAreasContainer = document.querySelector('.areadb');
 const optionDBArea = ['DB1', 'DB2', 'DB3', 'DB4', 'DB5', 'DB6','DB7',
 'DB8'];
 
-for (let i = 0; i < 19; i++) {
+for (let i = 0; i < 13; i++) {
     const dwAreaDiv = document.createElement('div');
     dwAreaDiv.classList.add('db-area-one');
 
@@ -129,10 +130,10 @@ for (let i = 0; i < 19; i++) {
 
 const dbcarsContainer = document.querySelector('.db-cars');
 
-const optionDBCars = ['BR01', 'BR02', 'BR03', 'BR04', 'BR05', 'BR06','BR07',
-'BR08','BR09','BR10','BR11'];
+const optionDBCars = ['Bravo 01', 'Bravo 02', 'Bravo 03', 'Bravo 04', 'Bravo 05', 'Bravo 06','Bravo 07',
+'Bravo 08','Bravo 09','Bravo 10','Bravo 11'];
 
-for (let i = 0; i < 19; i++){
+for (let i = 0; i < 13; i++){
     const dwcarsdiv = document.createElement('div');
     dwcarsdiv.classList.add('db-cars');
 
@@ -161,7 +162,7 @@ const cbarAreasContainer = document.querySelector('.areacbar');
 const optionCBARArea = ['A01', 'A02', 'A03', 'A04', 'A05', 'A06','A07',
 'A08','A09','A10','A11','A12','A13'];
 
-for (let i = 0; i < 19; i++) {
+for (let i = 0; i < 13; i++) {
     const cbarAreaDiv = document.createElement('div');
     cbarAreaDiv.classList.add('cbar-area-one');
 
@@ -203,9 +204,9 @@ for (let i = 0; i < 19; i++) {
 
 const CbarcarsContainer = document.querySelector('.cbar-cars');
 
-const optionCBARCars = ['R43', 'R44', 'R45', 'R46', 'R47'];
+const optionCBARCars = ['Romeo 43', 'Romeo 44', 'Romeo 45', 'Romeo 46', 'Romeo 47'];
 
-for (let i = 0; i < 19; i++){
+for (let i = 0; i < 13; i++){
     const cbarcarsdiv = document.createElement('div');
     cbarcarsdiv.classList.add('db-cars');
 
@@ -231,10 +232,9 @@ for (let i = 0; i < 19; i++){
 /*Vigilant*/
 const vigAreasContainer = document.querySelector('.areavig');
 
-const optionVigArea = ['BEL', 'BLU', 'BRA', 'DUR', 'HIL', 'KLP','KRA',
-'KUI','PIN','SEA','STE','STR','V1A','V1B','V1C', 'V1D', 'V1E'];
+const optionVigArea = ['V1A','V1B','V1C', 'V1D', 'V1E'];
 
-for (let i = 0; i < 19; i++) {
+for (let i = 0; i < 13; i++) {
     const vigAreaDiv = document.createElement('div');
     vigAreaDiv.classList.add('vig-area-one');
 
@@ -276,9 +276,10 @@ for (let i = 0; i < 19; i++) {
 
 const vigcarsContainer = document.querySelector('.vig-cars');
 
-const optionVigCars = ['R01','R02', 'R03','R04','R05','R06'];
+const optionVigCars = ['Victor Sierra 01','Victor Sierra 02', 'Victor Sierra 03','Victor Sierra 04',
+'Victor Sierra 05','Victor Sierra 06'];
 
-for (let i = 0; i < 19; i++){
+for (let i = 0; i < 13; i++){
     const vigcarsdiv = document.createElement('div');
     vigcarsdiv.classList.add('vig-cars');
 
@@ -301,4 +302,27 @@ for (let i = 0; i < 19; i++){
     vigcarsContainer.appendChild(selectElement);
 }
 
+const dateTime = document.querySelector('.date-time');
 
+function updateTime(){
+
+const date = new Date();
+let hour = date.getHours();
+let minutes = date.getMinutes();
+let seconds = date.getSeconds();
+
+hour = String(hour).padStart(2, '0');
+minutes = String(minutes).padStart(2, '0');
+seconds = String(seconds).padStart(2, '0');
+
+let time = `${hour}:${minutes}:${seconds}`
+
+const timeNode = document.createTextNode(time)
+
+dateTime.textContent = time
+
+}
+
+updateTime()
+
+setInterval(updateTime, 1000)

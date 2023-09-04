@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: 'Roboto', sans-serif;
 }
 
 :root {
@@ -16,6 +17,10 @@ body {
   --lightBlue--colour: #7ba9e6b8;
 }
 
+.container{
+  max-width: 100%;
+}
+
 #hero-container {
   max-width: 100%;
   position: relative;
@@ -24,13 +29,20 @@ body {
 #navbar {
   max-width: 100%;
   background-color: #0d0d0d;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+
 }
 
-#navbar img {
-  max-width: 100%;
-  width: 10%;
-  padding: 10px;
+#navbar h1 {
+ color: var(--white--colour);
+ text-align: center;
+}
+
+#powered-by{
+  max-width:100%;
+  width:30%;
+  font-size: 20px;
 }
 
 .nav-heading{
@@ -41,163 +53,107 @@ body {
 
 #arcompanies-container{
   max-width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  
-}
-
-.dw-name,.db-name,.cbar-name,.vig-name{
-  text-align: center;
-  height:85px;
-}
-
-/*District Watch style*/
-.dw-name,#dw-cars{
-  background-color: var(--Blue--colour);
-  color: var(--white--colour);
-  border-top: transparent;
-  border-right: transparent;
-  border-bottom:1px solid var(--white--colour);
-}
-
-#dw-cars,#dw-area,#db-cars,#db-area,#cbar-cars,#cbar-area,#vig-cars,
-#vig-area{
-  height:5vh;
-  font-size:20px;
-  text-align: center;
-  width: 2.84vw;
-}
-
-#dw-cars,#vig-cars{
-max-width: 100%;
-width:19vw;
-}
-
-#db-cars,#cbar-cars{
-max-width: 100%;
-width:19.28vw;
-}
-
-#dw-area{
-  background-color: var(--black--colour);
-  color: var(--white--colour);
-  border-top: transparent;
-  border-left: transparent;
-  border-bottom:1px solid var(--white--colour);
-}
-/*District Watch style*/
-
-/*District Basset style*/
-.db-name,#db-cars{
-  background-color: var(--orange--colour);
-  color: var(--white--colour);
-  border-top: transparent;
-  border-bottom:1px solid var(--white--colour);
-}
-
-#db-area{
-  background-color: var(--black--colour);
-  color: var(--white--colour);
-  border-top: transparent;
-  border-bottom:1px solid var(--white--colour);
-}
-
-.dw-areas,.db-areas,.vig-areas{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  max-width: 35%;
-}
-/*District Basset style*/
-
-/*Cbar style*/
-.cbar-name,#cbar-cars{
-  background-color: var(--red--colour);
-  color: var(--white--colour);
-  border-top: transparent;
-  border-bottom:1px solid var(--white--colour);
-}
-
-#cbar-area{
-  background-color: var(--black--colour);
-  color: var(--white--colour);
-  border-top: transparent;
-  border-bottom:1px solid var(--white--colour);
-}
-/*CBAR style*/
-
-/*Vigilant style*/
-.vig-name,#vig-cars{
-  background-color: var(--lightBlue--colour);
-  color: var(--white--colour);
-  border-top: transparent;
-  border-bottom:1px solid var(--white--colour);
-}
-
-#vig-area{
-  background-color: var(--black--colour);
-  color: var(--white--colour);
-  border-top: transparent;
-  border-bottom:1px solid var(--white--colour);
-}
-/*Vigilant style*/
-
-
-.dw-areas,.db-areas,.vig-areas{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  max-width: 35%;
-}
-
-.cbar-areas{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  max-width: 43%;
+  display: flex;
 }
 
 .pair-div{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  max-width: 28%;
+  display: flex;
+  flex-direction: row;
 }
 
-.dw-logo img,.db-logo img{
-  margin-top: 13px;
-  object-fit: contain;
-  height: 21vh;
-  max-width: 100%;
+.dw-name h1,.db-name h1,.cbar-name h1,.vig-name h1{
+  font-size: 40px;
+  font-weight: bold;
 }
 
-.reminders{
-  animation: animateReminder 1800 infinite linear;
-  font-size: 20px;
-  padding-top:15px;
-}
-
-@keyframes animateReminder  {
-  0%{
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    opacity:0;
-  }
-}
-
-
-@media screen and (min-width: 1280px) {
+.dw-name{
+  background-color: var(--Blue--colour);
+  height: 101px;
+  color: var(--white--colour);
   
-
-#dw-cars, #db-cars, #cbar-cars, #vig-cars {
-  width: 14.72vw;
 }
 
-#dw-area,#db-area,#cbar-area,#vig-area{
+.dw-areas select{
+  background-color: var(--Blue--colour);
+  color: var(--white--colour);
+  border-color: var(--white--colour);
+  text-align: center;
+  font-size: 25px;
+  
+}
+
+.db-name{
+  background-color: var(--orange--colour);
+  height: 101px;
+  color: var(--white--colour);
+}
+
+.db-areas select{
+  background-color: var(--orange--colour);
+  color: var(--white--colour);
+  border-color: var(--white--colour);
+  text-align: center;
+  font-size: 25px;
+  
+}
+
+.db-area-one,.cbar-area-one,.vig-area-one{
+  border-left:3px solid var(--black--colour);
+}
+
+.cbar-name{
+  background-color: var(--red--colour);
+  height: 101px;
+  color: var(--white--colour);
+}
+
+.cbar-areas select{
+  background-color: var(--red--colour);
+  color: var(--white--colour);
+  border-color: var(--white--colour);
+  text-align: center;
+  font-size: 25px;
+}
+
+.vig-name{
+  background-color: var(--lightBlue--colour);
+  height: 101px;
+  color: var(--white--colour);
+}
+
+.vig-areas select{
+  background-color: var(--lightBlue--colour);
+  color: var(--white--colour);
+  border-color: var(--white--colour);
+  text-align: center;
+  font-size: 25px;
+}
+
+.dw-areas,.db-areas,.cbar-areas,.vig-areas{
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+}
+
+.dw-cars select,.db-cars select,.cbar-cars select,
+.vig-cars select{
+  max-width: 100%;
+  width: 381.5px;
+}
+
+
+h1{
+  text-align: center;
+}
+
+select{
+  display: block;
+  max-height: 100%;
+  height: 6.1vh;
   width: 5vw;
 }
 
-}
+
 
 
 
