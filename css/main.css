@@ -8,13 +8,11 @@ body {
 
 :root {
   --Blue--colour: #3264a6b6;
-  --Green--colour: #0df205;
-  --Green--colour: #0df205;
+  --Green--colour: #1bb416b0;
   --white--colour: #ffffff;
   --black--colour: #0d0d0de1;
   --orange--colour: #d85521af;
   --red--colour: #b31111b3;
-  --lightBlue--colour: #7ba9e6b8;
 }
 
 .container{
@@ -68,65 +66,69 @@ body {
 
 .dw-name{
   background-color: var(--Blue--colour);
-  height: 101px;
+  height: auto;
   color: var(--white--colour);
-  
 }
 
-.dw-areas select{
-  background-color: var(--Blue--colour);
+.dw-area{
   color: var(--white--colour);
   border-color: var(--white--colour);
   text-align: center;
-  font-size: 25px;
-  
+  font-size: 45px;
+  padding-top:20px;
+  padding-bottom:33px;
+  height: 5.55vh;
 }
 
 .db-name{
   background-color: var(--orange--colour);
-  height: 101px;
+  height: auto;
   color: var(--white--colour);
+  
 }
 
-.db-areas select{
-  background-color: var(--orange--colour);
+.db-area{
   color: var(--white--colour);
   border-color: var(--white--colour);
   text-align: center;
-  font-size: 25px;
-}
-
-.db-area-one,.cbar-area-one,.vig-area-one{
-  border-left:3px solid var(--black--colour);
+  font-size: 45px;
+  padding-top:20px;
+  padding-bottom:33px;
+  height: 5.55vh;
+  overflow: hidden;
 }
 
 .cbar-name{
   background-color: var(--red--colour);
-  height: 101px;
+  height: auto;
   color: var(--white--colour);
 }
 
-.cbar-areas select{
-  background-color: var(--red--colour);
+
+.cbar-area{
   color: var(--white--colour);
   border-color: var(--white--colour);
   text-align: center;
-  font-size: 25px;
+  font-size: 45px;
+  padding-top:30px;
+  padding-bottom: 22px;
 }
 
 .vig-name{
-  background-color: var(--lightBlue--colour);
-  height: 101px;
+  background-color: var(--Green--colour);
+  height:auto;
   color: var(--white--colour);
 }
 
-.vig-areas select{
-  background-color: var(--lightBlue--colour);
+.vig-areas{
   color: var(--white--colour);
   border-color: var(--white--colour);
   text-align: center;
-  font-size: 25px;
+  font-size: 45px;
+  padding-top:10px;
+  padding-bottom: 45px;
 }
+
 
 .dw-areas,.db-areas,.cbar-areas,.vig-areas{
   display: flex;
@@ -134,10 +136,30 @@ body {
   width: 100%;
 }
 
-.dw-cars select,.db-cars select,.cbar-cars select,
-.vig-cars select{
+.dw-cars select,.dw-cars-two select,.dw-cars-three select,.db-cars select,.db-cars-two select,.db-cars-three select,
+.cbar-cars select,.cbar-cars-two select,.cbar-cars-three select,.vig-cars select,.vig-cars-two select,.vig-cars-three select{
   max-width: 100%;
-  width: 381.5px;
+  width: 100%;
+  height: 11vh;
+  background-color: transparent;
+  border-color: var(--white--colour);
+  font-size: 20px;
+}
+
+.dw-cars option,.dw-cars-two option,.dw-cars-three option{
+  background-color: var(--Blue--colour);
+}
+
+.db-cars option,.db-cars-two option,.db-cars-three option{
+  background-color: var(--orange--colour);
+}
+
+.cbar-cars option,.cbar-cars-two option,.cbar-cars-three option{
+  background-color: var(--red--colour);
+}
+
+.vig-cars option,.vig-cars-two option,.vig-cars-three option{
+  background-color: var(--Green--colour);
 }
 
 
@@ -145,11 +167,10 @@ h1{
   text-align: center;
 }
 
-select{
-  display: block;
-  max-height: 100%;
-  height: 6.2vh;
-  width: 5vw;
+option,select{
+  font-size: 25px;
+  text-align: center;
+  color: var(--white--colour);
 }
 
 @media (max-width: 1920px) {
@@ -158,10 +179,6 @@ select{
     width:25%;
   }
 
-  .dw-areas select,.db-areas select,.cbar-areas select,.vig-areas select{
-    width:9.91rem;
-    font-size: 20px;
-  }
 
   #powered-by{
     padding-left: 1rem;
@@ -186,12 +203,6 @@ select{
 
   .dw-name h1,.db-name h1,.cbar-name h1,.vig-name h1{
     font-size:25px;
-  }
-
-  .dw-areas select,.db-areas select,.cbar-areas select,.vig-areas select{
-    width:6.55rem;
-    font-size: 13px;
-    height: 2.6rem;
   }
 
   #powered-by{
@@ -219,11 +230,6 @@ select{
     font-size:25px;
   }
 
-  .dw-areas select,.db-areas select,.cbar-areas select,.vig-areas select{
-    width:5.2rem;
-    font-size: 13px;
-    height: 2.6rem;
-  }
 
   #powered-by{
     padding-left: 1rem;

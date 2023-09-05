@@ -1,63 +1,22 @@
 /*District Watch*/
 const dwAreasContainer = document.querySelector('.areadw');
+const dwValues = ['DW1', 'DW2', 'DW3', 'DW4', 'DW5', 'DW6', ' '];
 
-const optionValues = ['DW1', 'DW2', 'DW3', 'DW4', 'DW5', 'DW6'];
+for (let i = 0; i < dwValues.length; i++) {
 
-
-for (let i = 0; i < 13; i++) {
     const dwAreaDiv = document.createElement('div');
-    dwAreaDiv.classList.add('dw-area-one');
-
-    const dwplaceholderOne = document.createAttribute('placeholder')
-    dwplaceholderOne.textContent = 'Area 1'
-
-    const dwAreaTwoDiv = document.createElement('div');
-    dwAreaTwoDiv.classList.add('dw-area-two');
-
-    const dwplaceholderTwo = document.createAttribute('placeholder')
-    dwplaceholderTwo.textContent = 'Area 2'
-
-    const selectElement1 = document.createElement('select');
-    selectElement1.name = `dw-area`;
-    selectElement1.id = `dw-area`;
-
-    const selectElement2 = document.createElement('select');
-    selectElement2.name = `dw-area`;
-    selectElement2.id = `dw-area`;
-
-    const defaultOption = document.createElement('option');
-    defaultOption.value = '';
-    defaultOption.textContent = '';
-    selectElement1.appendChild(defaultOption.cloneNode(true));
-    selectElement2.appendChild(defaultOption.cloneNode(true));
-
-    
-
-    for (const value of optionValues) {
-        const option = document.createElement('option');
-        option.value = value;
-        option.textContent = value;
-        selectElement1.appendChild(option);
-        selectElement2.appendChild(option.cloneNode(true));
-    }
-
-    dwAreaDiv.appendChild(selectElement1)
-    dwAreaTwoDiv.appendChild(selectElement2)
-
-    const pairDiv = document.createElement('div');
-    pairDiv.classList.add('pair-div')
-    pairDiv.appendChild(dwAreaDiv);
-    pairDiv.appendChild(dwAreaTwoDiv);
-
-    dwAreasContainer.appendChild(pairDiv);
+    dwAreaDiv.classList.add('dw-area');
+    dwAreaDiv.textContent = dwValues[i];
+    dwAreasContainer.appendChild(dwAreaDiv);
 }
 
-const optionCarValues = ['Romeo 01', 'Romeo 02', 'Romeo 03', 'Romeo 04', 'Romeo 05',
- 'Romeo 06','Romeo 07','Romeo 08','Romeo 09','Romeo 10','Romeo 11','Romeo 12'];
+
+const optionCarValues = ['RR 1', 'RR 2', 'RR 3', 'RR 4', 'RR 5',
+ 'RR 6','RR 7','RR 8','RR 9','RR 10','RR 11','RR 12'];
 
 const dwCarsContainer = document.querySelector('.dw-cars');
 
-for (let i = 0; i < 13; i++){
+for (let i = 0; i < 6; i++){
     const dwcarsdiv = document.createElement('div');
     dwcarsdiv.classList.add('dw-cars');
 
@@ -67,7 +26,7 @@ for (let i = 0; i < 13; i++){
 
     const defaultOption = document.createElement('option');
     defaultOption.value = '';
-    defaultOption.textContent = '';
+    defaultOption.textContent = 'Select Car';
     selectElement.appendChild(defaultOption);
 
     for (const value of optionCarValues){
@@ -80,62 +39,78 @@ for (let i = 0; i < 13; i++){
     dwCarsContainer.appendChild(selectElement);
 }
 
-/*District Basset*/
-const dbAreasContainer = document.querySelector('.areadb');
+const dwCarstwoContainer = document.querySelector('.dw-cars-two');
 
-const optionDBArea = ['DB1', 'DB2', 'DB3', 'DB4', 'DB5', 'DB6','DB7',
-'DB8'];
+for (let i = 0; i < 6; i++){
+    const dwcarsdiv = document.createElement('div');
+    dwcarsdiv.classList.add('dw-cars-two');
 
-for (let i = 0; i < 13; i++) {
-    const dwAreaDiv = document.createElement('div');
-    dwAreaDiv.classList.add('db-area-one');
-
-    const dwAreaTwoDiv = document.createElement('div');
-    dwAreaTwoDiv.classList.add('db-area-two');
-
-    const selectElement1 = document.createElement('select');
-    selectElement1.name = `db-area`;
-    selectElement1.id = `db-area`;
-
-    const selectElement2 = document.createElement('select');
-    selectElement2.name = `db-area`;
-    selectElement2.id = `db-area`;
+    const selectElement = document.createElement('select');
+    selectElement.name = `dw-cars-two`;
+    selectElement.id = `dw-cars-two`;
 
     const defaultOption = document.createElement('option');
-    defaultOption.value = ' ';
-    defaultOption.textContent = ' ';
-    selectElement1.appendChild(defaultOption.cloneNode(true));
-    selectElement2.appendChild(defaultOption.cloneNode(true));
+    defaultOption.value = '';
+    defaultOption.textContent = 'Select Car';
+    selectElement.appendChild(defaultOption);
 
-    
-
-    for (const value of optionDBArea) {
+    for (const value of optionCarValues){
         const option = document.createElement('option');
         option.value = value;
         option.textContent = value;
-        selectElement1.appendChild(option);
-        selectElement2.appendChild(option.cloneNode(true));
+        selectElement.appendChild(option);
     }
 
-    dwAreaDiv.appendChild(selectElement1)
-    dwAreaTwoDiv.appendChild(selectElement2)
+    dwCarstwoContainer.appendChild(selectElement);
+}
 
-    const pairDiv = document.createElement('div');
-    pairDiv.classList.add('pair-div')
-    pairDiv.appendChild(dwAreaDiv);
-    pairDiv.appendChild(dwAreaTwoDiv);
+const dwCarsthreeContainer = document.querySelector('.dw-cars-three');
 
-    dbAreasContainer.appendChild(pairDiv);
+for (let i = 0; i < 6; i++){
+    const dwcarsdiv = document.createElement('div');
+    dwcarsdiv.classList.add('dw-cars-three');
+
+    const selectElement = document.createElement('select');
+    selectElement.name = `dw-cars-three`;
+    selectElement.id = `dw-cars-three`;
+
+    const defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.textContent = 'Select Car';
+    selectElement.appendChild(defaultOption);
+
+    for (const value of optionCarValues){
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        selectElement.appendChild(option);
+    }
+
+    dwCarsthreeContainer.appendChild(selectElement);
+}
+
+/*District Basset*/
+const dbAreasContainer = document.querySelector('.areadb');
+
+const dbValues = ['DB1', 'DB2', 'DB3', 'DB4', 'DB5', 'DB6','DB7',
+'DB8'];
+
+for (let i = 0; i < dbValues.length; i++) {
+
+    const dbAreaDiv = document.createElement('div');
+    dbAreaDiv.classList.add('db-area');
+    dbAreaDiv.textContent = dbValues[i];
+    dbAreasContainer.appendChild(dbAreaDiv);
 }
 
 const dbcarsContainer = document.querySelector('.db-cars');
 
-const optionDBCars = ['Bravo 01', 'Bravo 02', 'Bravo 03', 'Bravo 04', 'Bravo 05', 'Bravo 06','Bravo 07',
-'Bravo 08','Bravo 09','Bravo 10','Bravo 11'];
+const optionDBCars = ['BR 01', 'BR 02', 'BR 03', 'BR 04', 'BR 05', 'BR 06','BR 07',
+'BR 08','BR 09','BR 10','BR 11'];
 
-for (let i = 0; i < 13; i++){
-    const dwcarsdiv = document.createElement('div');
-    dwcarsdiv.classList.add('db-cars');
+for (let i = 0; i < 8; i++){
+    const dbcarsdiv = document.createElement('div');
+    dbcarsdiv.classList.add('db-cars');
 
     const selectElement = document.createElement('select');
     selectElement.name = `db-cars`;
@@ -143,7 +118,7 @@ for (let i = 0; i < 13; i++){
 
     const defaultOption = document.createElement('option');
     defaultOption.value = '';
-    defaultOption.textContent = '';
+    defaultOption.textContent = 'Select Car';
     selectElement.appendChild(defaultOption);
 
     for (const value of optionDBCars){
@@ -156,59 +131,78 @@ for (let i = 0; i < 13; i++){
     dbcarsContainer.appendChild(selectElement);
 }
 
-/*CBAR*/
-const cbarAreasContainer = document.querySelector('.areacbar');
+const dbcarstwoContainer = document.querySelector('.db-cars-two');
 
-const optionCBARArea = ['A01', 'A02', 'A03', 'A04', 'A05', 'A06','A07',
-'A08','A09','A10','A11','A12','A13'];
+for (let i = 0; i < 8; i++){
+    const dwcarsdiv = document.createElement('div');
+    dwcarsdiv.classList.add('db-cars-two');
 
-for (let i = 0; i < 13; i++) {
-    const cbarAreaDiv = document.createElement('div');
-    cbarAreaDiv.classList.add('cbar-area-one');
-
-    const cbarAreaTwoDiv = document.createElement('div');
-    cbarAreaTwoDiv.classList.add('cbar-area-two');
-
-    const selectElement1 = document.createElement('select');
-    selectElement1.name = `cbar-area`;
-    selectElement1.id = `cbar-area`;
-
-    const selectElement2 = document.createElement('select');
-    selectElement2.name = `cbar-area`;
-    selectElement2.id = `cbar-area`;
+    const selectElement = document.createElement('select');
+    selectElement.name = `db-cars-two`;
+    selectElement.id = `db-cars-two`;
 
     const defaultOption = document.createElement('option');
-    defaultOption.value = ' ';
-    defaultOption.textContent = ' ';
-    selectElement1.appendChild(defaultOption.cloneNode(true));
-    selectElement2.appendChild(defaultOption.cloneNode(true));
+    defaultOption.value = '';
+    defaultOption.textContent = 'Select Car';
+    selectElement.appendChild(defaultOption);
 
-    for (const value of optionCBARArea) {
+    for (const value of optionDBCars){
         const option = document.createElement('option');
         option.value = value;
         option.textContent = value;
-        selectElement1.appendChild(option);
-        selectElement2.appendChild(option.cloneNode(true));
+        selectElement.appendChild(option);
     }
 
-    cbarAreaDiv.appendChild(selectElement1)
-    cbarAreaTwoDiv.appendChild(selectElement2)
+    dbcarstwoContainer.appendChild(selectElement);
+}
 
-    const pairDiv = document.createElement('div');
-    pairDiv.classList.add('pair-div')
-    pairDiv.appendChild(cbarAreaDiv);
-    pairDiv.appendChild(cbarAreaTwoDiv);
+const dbcarsthreeContainer = document.querySelector('.db-cars-three');
 
-    cbarAreasContainer.appendChild(pairDiv);
+for (let i = 0; i < 8; i++){
+    const dwcarsdiv = document.createElement('div');
+    dwcarsdiv.classList.add('db-cars-three');
+
+    const selectElement = document.createElement('select');
+    selectElement.name = `db-cars-three`;
+    selectElement.id = `db-cars-three`;
+
+    const defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.textContent = 'Select Car';
+    selectElement.appendChild(defaultOption);
+
+    for (const value of optionDBCars){
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        selectElement.appendChild(option);
+    }
+
+    dbcarsthreeContainer.appendChild(selectElement);
+}
+
+/*CBAR*/
+const cbarAreasContainer = document.querySelector('.areacbar');
+
+const cbarValues = ['A01', 'A02', 'A03', 'A04', 'A05', 'A06','A07',
+'A08','A09','A10','A11','A12','A13'];
+
+for (let i = 0; i < cbarValues.length; i++) {
+
+    const cbarAreaDiv = document.createElement('div');
+    cbarAreaDiv.classList.add('cbar-area');
+    cbarAreaDiv.textContent = cbarValues[i];
+
+    cbarAreasContainer.appendChild(cbarAreaDiv);
 }
 
 const CbarcarsContainer = document.querySelector('.cbar-cars');
 
-const optionCBARCars = ['Romeo 43', 'Romeo 44', 'Romeo 45', 'Romeo 46', 'Romeo 47'];
+const optionCBARCars = ['RR 43', 'RR 44', 'RR 45', 'RR 46', 'RR 47'];
 
 for (let i = 0; i < 13; i++){
     const cbarcarsdiv = document.createElement('div');
-    cbarcarsdiv.classList.add('db-cars');
+    cbarcarsdiv.classList.add('cbar-cars');
 
     const selectElement = document.createElement('select');
     selectElement.name = `cbar-cars`;
@@ -216,7 +210,7 @@ for (let i = 0; i < 13; i++){
 
     const defaultOption = document.createElement('option');
     defaultOption.value = '';
-    defaultOption.textContent = '';
+    defaultOption.textContent = 'Select Car';
     selectElement.appendChild(defaultOption);
 
     for (const value of optionCBARCars){
@@ -229,57 +223,79 @@ for (let i = 0; i < 13; i++){
     CbarcarsContainer.appendChild(selectElement);
 }
 
-/*Vigilant*/
-const vigAreasContainer = document.querySelector('.areavig');
+const CbarcarstwoContainer = document.querySelector('.cbar-cars-two');
 
-const optionVigArea = ['V1A','V1B','V1C', 'V1D', 'V1E'];
+for (let i = 0; i < 13; i++){
+    const cbarcarsdiv = document.createElement('div');
+    cbarcarsdiv.classList.add('cbar-cars-two');
 
-for (let i = 0; i < 13; i++) {
-    const vigAreaDiv = document.createElement('div');
-    vigAreaDiv.classList.add('vig-area-one');
-
-    const vigAreaTwoDiv = document.createElement('div');
-    vigAreaTwoDiv.classList.add('vig-area-two');
-
-    const selectElement1 = document.createElement('select');
-    selectElement1.name = `vig-area`;
-    selectElement1.id = `vig-area`;
-
-    const selectElement2 = document.createElement('select');
-    selectElement2.name = `vig-area`;
-    selectElement2.id = `vig-area`;
+    const selectElement = document.createElement('select');
+    selectElement.name = `cbar-cars-two`;
+    selectElement.id = `cbar-cars-two`;
 
     const defaultOption = document.createElement('option');
-    defaultOption.value = ' ';
-    defaultOption.textContent = ' ';
-    selectElement1.appendChild(defaultOption.cloneNode(true));
-    selectElement2.appendChild(defaultOption.cloneNode(true));
+    defaultOption.value = '';
+    defaultOption.textContent = 'Select Car';
+    selectElement.appendChild(defaultOption);
 
-    for (const value of optionVigArea) {
+    for (const value of optionCBARCars){
         const option = document.createElement('option');
         option.value = value;
         option.textContent = value;
-        selectElement1.appendChild(option);
-        selectElement2.appendChild(option.cloneNode(true));
+        selectElement.appendChild(option);
     }
 
-    vigAreaDiv.appendChild(selectElement1)
-    vigAreaTwoDiv.appendChild(selectElement2)
-
-    const pairDiv = document.createElement('div');
-    pairDiv.classList.add('pair-div')
-    pairDiv.appendChild(vigAreaDiv);
-    pairDiv.appendChild(vigAreaTwoDiv);
-
-    vigAreasContainer.appendChild(pairDiv);
+    CbarcarstwoContainer.appendChild(selectElement);
 }
+
+const CbarcarsthreeContainer = document.querySelector('.cbar-cars-three');
+
+for (let i = 0; i < 13; i++){
+    const cbarcarsdiv = document.createElement('div');
+    cbarcarsdiv.classList.add('cbar-cars-three');
+
+    const selectElement = document.createElement('select');
+    selectElement.name = `cbar-cars-three`;
+    selectElement.id = `cbar-cars-three`;
+
+    const defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.textContent = 'Select Car';
+    selectElement.appendChild(defaultOption);
+
+    for (const value of optionCBARCars){
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        selectElement.appendChild(option);
+    }
+
+    CbarcarsthreeContainer.appendChild(selectElement);
+}
+
+
+
+/*Vigilant*/
+const vigAreasContainer = document.querySelector('.areavig');
+
+const vigValues = ['V1A','V1B','V1C', 'V1D', 'V1E'];
+
+for (let i = 0; i < vigValues.length; i++) {
+
+    const vigAreaDiv = document.createElement('div');
+    vigAreaDiv.classList.add('vig-areas');
+    vigAreaDiv.textContent = vigValues[i];
+
+    vigAreasContainer.appendChild(vigAreaDiv);
+}
+
 
 const vigcarsContainer = document.querySelector('.vig-cars');
 
-const optionVigCars = ['Victor Sierra 01','Victor Sierra 02', 'Victor Sierra 03','Victor Sierra 04',
-'Victor Sierra 05','Victor Sierra 06'];
+const optionVigCars = ['V 1','V 2', 'V 3','V 4',
+'V 5','V 6'];
 
-for (let i = 0; i < 13; i++){
+for (let i = 0; i < 5; i++){
     const vigcarsdiv = document.createElement('div');
     vigcarsdiv.classList.add('vig-cars');
 
@@ -289,10 +305,10 @@ for (let i = 0; i < 13; i++){
 
     const defaultOption = document.createElement('option');
     defaultOption.value = '';
-    defaultOption.textContent = '';
+    defaultOption.textContent = 'Select Car';
     selectElement.appendChild(defaultOption);
 
-    for (const value of optionVigCars){
+    for (const value of optionCBARCars){
         const option = document.createElement('option');
         option.value = value;
         option.textContent = value;
@@ -300,6 +316,56 @@ for (let i = 0; i < 13; i++){
     }
 
     vigcarsContainer.appendChild(selectElement);
+}
+
+const vigcarstwoContainer = document.querySelector('.vig-cars-two');
+
+for (let i = 0; i < 5; i++){
+    const vigcarsdiv = document.createElement('div');
+    vigcarsdiv.classList.add('vig-cars-two');
+
+    const selectElement = document.createElement('select');
+    selectElement.name = `vig-cars-two`;
+    selectElement.id = `vig-cars-two`;
+
+    const defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.textContent = 'Select Car';
+    selectElement.appendChild(defaultOption);
+
+    for (const value of optionCBARCars){
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        selectElement.appendChild(option);
+    }
+
+    vigcarstwoContainer.appendChild(selectElement);
+}
+
+const vigcarsthreeoContainer = document.querySelector('.vig-cars-three');
+
+for (let i = 0; i < 5; i++){
+    const vigcarsdiv = document.createElement('div');
+    vigcarsdiv.classList.add('vig-cars-three');
+
+    const selectElement = document.createElement('select');
+    selectElement.name = `vig-cars-three`;
+    selectElement.id = `vig-cars-three`;
+
+    const defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.textContent = 'Select Car';
+    selectElement.appendChild(defaultOption);
+
+    for (const value of optionCBARCars){
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        selectElement.appendChild(option);
+    }
+
+    vigcarsthreeoContainer.appendChild(selectElement);
 }
 
 const dateTime = document.querySelector('.date-time');
