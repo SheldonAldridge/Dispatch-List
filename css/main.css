@@ -262,7 +262,7 @@ option,select{
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
   }
- 
+
 }
 
 @media (max-width: 1024px) {
@@ -284,6 +284,10 @@ option,select{
     font-size:25px;
   }
 
+  .vig-areas{
+    font-size: 30px;
+  }
+
 
   #powered-by{
     padding-left: 1rem;
@@ -295,7 +299,6 @@ option,select{
     height: 17vh;
     background-color: transparent;
     border-color: var(--white--colour);
-    font-size: 30px;
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
   }
