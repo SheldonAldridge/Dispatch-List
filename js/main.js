@@ -184,14 +184,21 @@ for (let i = 0; i < 8; i++){
 /*CBAR*/
 const cbarAreasContainer = document.querySelector('.areacbar');
 
-const cbarValues = ['A01', 'A02', 'A03', 'A04', 'A05', 'A06','A07',
-'A08','A09','A10','A11','A12','A13'];
+const cbarValues = ['A01 A03 A05','A02 A04','A09 A13','A07 A08 A11 A14','A10 A12 A06'];
 
 for (let i = 0; i < cbarValues.length; i++) {
 
     const cbarAreaDiv = document.createElement('div');
     cbarAreaDiv.classList.add('cbar-area');
     cbarAreaDiv.textContent = cbarValues[i];
+    
+
+    if(i <= 2){
+        cbarAreaDiv.style.paddingBottom = '31px';
+    }
+    else if(i === 3){
+        cbarAreaDiv.style.paddingBottom = '14px';
+    }
 
     cbarAreasContainer.appendChild(cbarAreaDiv);
 }
@@ -200,13 +207,26 @@ const CbarcarsContainer = document.querySelector('.cbar-cars');
 
 const optionCBARCars = ['RR 43', 'RR 44', 'RR 45', 'RR 46', 'RR 47'];
 
-for (let i = 0; i < 13; i++){
+for (let i = 0; i < 5; i++){
     const cbarcarsdiv = document.createElement('div');
     cbarcarsdiv.classList.add('cbar-cars');
+
 
     const selectElement = document.createElement('select');
     selectElement.name = `cbar-cars`;
     selectElement.id = `cbar-cars`;
+
+    if(i === 2){
+        selectElement.style.height='13vh';
+    }
+
+    else if(i === 1){
+        selectElement.style.height='13vh';
+    }
+
+    else if(i === 4){
+        selectElement.style.height='20vh';
+    }
 
     const defaultOption = document.createElement('option');
     defaultOption.value = '';
@@ -225,13 +245,25 @@ for (let i = 0; i < 13; i++){
 
 const CbarcarstwoContainer = document.querySelector('.cbar-cars-two');
 
-for (let i = 0; i < 13; i++){
+for (let i = 0; i < 5; i++){
     const cbarcarsdiv = document.createElement('div');
     cbarcarsdiv.classList.add('cbar-cars-two');
 
     const selectElement = document.createElement('select');
     selectElement.name = `cbar-cars-two`;
     selectElement.id = `cbar-cars-two`;
+
+    if(i === 2){
+        selectElement.style.height='13vh';
+    }
+
+    else if(i === 1){
+        selectElement.style.height='13vh';
+    }
+
+    else if(i === 4){
+        selectElement.style.height='20vh';
+    }
 
     const defaultOption = document.createElement('option');
     defaultOption.value = '';
@@ -250,13 +282,25 @@ for (let i = 0; i < 13; i++){
 
 const CbarcarsthreeContainer = document.querySelector('.cbar-cars-three');
 
-for (let i = 0; i < 13; i++){
+for (let i = 0; i < 5; i++){
     const cbarcarsdiv = document.createElement('div');
     cbarcarsdiv.classList.add('cbar-cars-three');
 
     const selectElement = document.createElement('select');
     selectElement.name = `cbar-cars-three`;
     selectElement.id = `cbar-cars-three`;
+
+    if(i === 2){
+        selectElement.style.height='13vh';
+    }
+
+    else if(i === 1){
+        selectElement.style.height='13vh';
+    }
+
+    else if(i === 4){
+        selectElement.style.height='20vh';
+    }
 
     const defaultOption = document.createElement('option');
     defaultOption.value = '';

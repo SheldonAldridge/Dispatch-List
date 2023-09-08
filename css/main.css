@@ -4,6 +4,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  padding: 0;
 }
 
 :root {
@@ -15,9 +16,7 @@ body {
   --red--colour: #b31111b3;
 }
 
-.container{
-  max-width: 100%;
-}
+
 
 #hero-container {
   max-width: 100%;
@@ -52,11 +51,20 @@ body {
 #arcompanies-container{
   max-width: 100%;
   display: flex;
+  max-height: 100%;
+ 
+  margin-bottom: -1rem;
 }
 
 .pair-div{
   display: flex;
   flex-direction: row;
+}
+
+.dw-name,.db-name,.cbar-name,.vig-name{
+  font-size: 40px;
+  font-weight: bold;
+  
 }
 
 .dw-name h1,.db-name h1,.cbar-name h1,.vig-name h1{
@@ -66,57 +74,59 @@ body {
 
 .dw-name{
   background-color: var(--Blue--colour);
-  height: auto;
   color: var(--white--colour);
+  height: auto;
 }
 
 .dw-area{
-  color: var(--white--colour);
+  color: var(--black--colour);
   border-color: var(--white--colour);
   text-align: center;
   font-size: 45px;
-  padding-top:20px;
-  padding-bottom:33px;
-  height: 5.55vh;
+  padding:20px;
+  
 }
 
 .db-name{
   background-color: var(--orange--colour);
-  height: auto;
   color: var(--white--colour);
   
 }
 
+.dw-name,.db-name,.cbar-name,.vig-name{
+  
+}
+
 .db-area{
-  color: var(--white--colour);
+  color: var(--black--colour);
   border-color: var(--white--colour);
   text-align: center;
   font-size: 45px;
-  padding-top:20px;
-  padding-bottom:33px;
-  height: 5.55vh;
-  overflow: hidden;
+  padding:20px;
 }
 
 .cbar-name{
   background-color: var(--red--colour);
-  height: auto;
   color: var(--white--colour);
+  
 }
 
 
 .cbar-area{
-  color: var(--white--colour);
+  color: var(--black--colour);
   border-color: var(--white--colour);
   text-align: center;
-  font-size: 45px;
-  padding-top:30px;
-  padding-bottom: 22px;
+  font-size: 37px;
+  
+}
+
+.areacbar{
+  padding: 10px;
+  color: var(--black--colour);
 }
 
 .vig-name{
   background-color: var(--Green--colour);
-  height:auto;
   color: var(--white--colour);
 }
 
@@ -134,16 +144,32 @@ body {
   display: flex;
   max-width: 100%;
   width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  color: var(--black--colour);
 }
 
 .dw-cars select,.dw-cars-two select,.dw-cars-three select,.db-cars select,.db-cars-two select,.db-cars-three select,
-.cbar-cars select,.cbar-cars-two select,.cbar-cars-three select,.vig-cars select,.vig-cars-two select,.vig-cars-three select{
+.vig-cars select,.vig-cars-two select,.vig-cars-three select{
   max-width: 100%;
   width: 100%;
-  height: 11vh;
+  height: 10vh;
   background-color: transparent;
   border-color: var(--white--colour);
   font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+}
+
+.cbar-cars select,.cbar-cars-two select,.cbar-cars-three select{
+  max-width: 100%;
+  width: 100%;
+  height: 16vh;
+  background-color: transparent;
+  border-color: var(--white--colour);
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
 }
 
 .dw-cars option,.dw-cars-two option,.dw-cars-three option{
@@ -162,7 +188,6 @@ body {
   background-color: var(--Green--colour);
 }
 
-
 h1{
   text-align: center;
 }
@@ -173,6 +198,13 @@ option,select{
   color: var(--white--colour);
 }
 
+.footer{
+  background-color: var(--black--colour);
+  max-width: 100%;
+  height: 16vh;
+}
+
+
 @media (max-width: 1920px) {
 
   .dw-name,.db-name ,.cbar-name,.vig-name{
@@ -182,6 +214,17 @@ option,select{
 
   #powered-by{
     padding-left: 1rem;
+  }
+
+  .cbar-cars select,.cbar-cars-two select,.cbar-cars-three select{
+    max-width: 100%;
+    width: 100%;
+    height: 17vh;
+    background-color: transparent;
+    border-color: var(--white--colour);
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
   }
  
 }
@@ -208,6 +251,17 @@ option,select{
   #powered-by{
     padding-left: 1rem;
   }
+
+  .cbar-cars select,.cbar-cars-two select,.cbar-cars-three select{
+    max-width: 100%;
+    width: 100%;
+    height: 17vh;
+    background-color: transparent;
+    border-color: var(--white--colour);
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+  }
  
 }
 
@@ -233,6 +287,17 @@ option,select{
 
   #powered-by{
     padding-left: 1rem;
+  }
+
+  .cbar-cars select,.cbar-cars-two select,.cbar-cars-three select{
+    max-width: 100%;
+    width: 100%;
+    height: 17vh;
+    background-color: transparent;
+    border-color: var(--white--colour);
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
   }
  
 }
