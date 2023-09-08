@@ -106,7 +106,7 @@ for (let i = 0; i < dbValues.length; i++) {
 const dbcarsContainer = document.querySelector('.db-cars');
 
 const optionDBCars = ['BR 01', 'BR 02', 'BR 03', 'BR 04', 'BR 05', 'BR 06','BR 07',
-'BR 08','BR 09','BR 10','BR 11'];
+'BR 08','BR 09','BR 10','BR 11','BR 12','BR 13'];
 
 for (let i = 0; i < 8; i++){
     const dbcarsdiv = document.createElement('div');
