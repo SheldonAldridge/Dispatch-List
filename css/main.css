@@ -1,4 +1,5 @@
 :root {
+  --Navbar--colour: #0E1E34;
   --Blue--colour: #3264a6b6;
   --Green--colour: #1bb416b0;
   --white--colour: #ffffff;
@@ -6,6 +7,34 @@
   --orange--colour: #d85521af;
   --red--colour: #b31111b3;
 }
+
+.container-fluid{
+  --bs-gutter-x: 0rem !important;
+}
+
+.nav{
+background-color: var(--Navbar--colour);
+width: 10%;
+height: 100vh;
+}
+
+.flex-column{
+  margin: auto 0rem;
+}
+
+.nav-item{
+  text-align: center;
+  margin: auto;
+}
+
+.img-fluid{
+  width:60%;
+}
+
+.draggable {
+  cursor: grab;
+}
+
 
 
 
