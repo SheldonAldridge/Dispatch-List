@@ -8,24 +8,40 @@
   --red--colour: #b31111b3;
 }
 
-#container{
-  flex-wrap: wrap;
+.container-fluid{
+  flex-wrap: nowrap;
   display: flex;
-  gap: 1em;
+  --bs-gutter-x: 0rem !important;
 }
 
-#sidebar{
-  width: 30%;
+nav{
+  background-color: var(--Blue--colour);
 }
 
 li{
   list-style-type: none;
+  margin: 4.4em 0em ;
+  width:10vw;
 }
 
 li img{
-  max-width: 40%;
+  max-width:70%;
+  cursor: grab;
 }
 
+header{
+  width: 100%;
+  text-align: center;
+  margin: 0em 10em;
+}
+
+header h1,header p{
+  opacity: 0.2;
+}
+
+header p{
+  border: var(--black--colour) 1px solid;
+}
 
 
 
