@@ -8,33 +8,23 @@
   --red--colour: #b31111b3;
 }
 
-.container-fluid{
-  --bs-gutter-x: 0rem !important;
+#container{
+  flex-wrap: wrap;
+  display: flex;
+  gap: 1em;
 }
 
-.nav{
-background-color: var(--Navbar--colour);
-width: 10%;
-height: 100vh;
+#sidebar{
+  width: 30%;
 }
 
-.flex-column{
-  margin: auto 0rem;
+li{
+  list-style-type: none;
 }
 
-.nav-item{
-  text-align: center;
-  margin: auto;
+li img{
+  max-width: 40%;
 }
-
-.img-fluid{
-  width:60%;
-}
-
-.draggable {
-  cursor: grab;
-}
-
 
 
 
