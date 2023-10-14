@@ -1,6 +1,7 @@
 :root {
   --Navbar--colour: #0E1E34;
-  --Blue--colour: #3264a6b6;
+  --Solid--Blue--colour: #3264a6;
+  --faded--Blue--colour: #3264a6d0;
   --Green--colour: #1bb416b0;
   --white--colour: #ffffff;
   --black--colour: #0d0d0de1;
@@ -15,12 +16,14 @@
 }
 
 nav{
-  background-color: var(--Blue--colour);
+  background-color: var(--Solid--Blue--colour);
+  height:100vh;
+  z-index: 1;
 }
 
 li{
   list-style-type: none;
-  margin: 4.4em 0em ;
+  margin: 5em auto ;
   width:10vw;
 }
 
@@ -29,10 +32,27 @@ li img{
   cursor: grab;
 }
 
+#toggle-menu{
+  margin: auto -1em;
+  max-width:100%;
+  position: relative;
+  
+}
+
+.btn-dark{
+  width:3vw;
+  height: 10vh;
+}
+
+.btn-dark img{
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(22deg) brightness(103%) contrast(102%);
+
+}
+
 header{
   width: 100%;
   text-align: center;
-  margin: 0em 10em;
+  margin: 2em 10em;
 }
 
 header h1,header p{
@@ -42,6 +62,7 @@ header h1,header p{
 header p{
   border: var(--black--colour) 1px solid;
 }
+
 
 
 
