@@ -54,7 +54,7 @@ li img{
 }
 
 .btn-dark{
-  width:4vw;
+  width:3vw;
   height: 10vh;
   
 }
@@ -75,7 +75,7 @@ header h1,header p{
   opacity: 0.2;
 }
 
-section p{
+header p{
   border: var(--black--colour) 1px solid;
 }
 
