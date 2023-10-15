@@ -12,31 +12,43 @@
 .container-fluid{
   flex-wrap: nowrap;
   display: flex;
-  --bs-gutter-x: 0rem !important;
+  padding-left: 0 !important;
 }
 
 nav{
   background-color: var(--Solid--Blue--colour);
   height:100vh;
   z-index: 1;
+  animation: expand-contract-nav 1s forwards;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  width: 100%;
 }
 
 li{
-  list-style-type: none;
-  margin: 5em auto ;
-  width:10vw;
+  margin-top: 2em;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  transition: width 1s ease;
 }
 
 li img{
-  max-width:70%;
-  cursor: grab;
+  max-width: 100%;
+  height: auto; 
+  width: 50%; 
+  transition: width 1s ease;
 }
 
 #toggle-menu{
   margin: auto -1em;
   max-width:100%;
-  position: relative;
-  
+  width:6%;
 }
 
 .btn-dark{
@@ -46,7 +58,6 @@ li img{
 
 .btn-dark img{
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(22deg) brightness(103%) contrast(102%);
-
 }
 
 header{
@@ -63,11 +74,19 @@ header p{
   border: var(--black--colour) 1px solid;
 }
 
+/*Animations*/
 
+@keyframes expand-contract-nav {
+  0%{
+   width:100%
+  }
 
+  100%{
+    width:0;
+  }
+}
 
-
-
+/*Animations*/
 
 
 
