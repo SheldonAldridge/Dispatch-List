@@ -19,9 +19,11 @@ nav{
   background-color: var(--Solid--Blue--colour);
   height:100vh;
   z-index: 1;
-  animation: expand-contract-nav 1s forwards;
+  
   overflow: hidden;
 }
+
+
 
 ul {
   list-style: none;
@@ -31,7 +33,7 @@ ul {
 }
 
 li{
-  margin-top: 2em;
+  margin-top: 3em;
   max-width: 100%;
   height: auto;
   width: 100%;
@@ -39,10 +41,10 @@ li{
 }
 
 li img{
-  max-width: 100%;
   height: auto; 
-  width: 50%; 
+  width: 40%; 
   transition: width 1s ease;
+  cursor: grab;
 }
 
 #toggle-menu{
@@ -52,12 +54,15 @@ li img{
 }
 
 .btn-dark{
-  width:3vw;
+  width:4vw;
   height: 10vh;
+  
 }
 
 .btn-dark img{
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(22deg) brightness(103%) contrast(102%);
+  text-align: center;
+  width:3vw;
 }
 
 header{
@@ -70,15 +75,15 @@ header h1,header p{
   opacity: 0.2;
 }
 
-header p{
+section p{
   border: var(--black--colour) 1px solid;
 }
 
-/*Animations*/
+/*Animations Keyframe*/
 
-@keyframes expand-contract-nav {
+@keyframes contract-nav {
   0%{
-   width:100%
+    width:40%;
   }
 
   100%{
@@ -86,7 +91,54 @@ header p{
   }
 }
 
-/*Animations*/
+@keyframes expand-nav {
+  0%{
+   width:0
+  }
 
+  100%{
+    width:40%;
+  }
+}
 
+@keyframes rotate-arrow-close {
+  0%{
+   transform: rotate(0);
+  }
 
+  100%{
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate-arrow-open {
+  0%{
+   transform: rotate(180deg);
+  }
+
+  100%{
+    transform: rotate(0);
+  }
+}
+
+/*Animations Keyframe*/
+
+/*Animations classes*/
+.close-nav{
+  animation: contract-nav 1s forwards;
+  
+}
+
+.open-nav{
+  animation: expand-nav 2s 1 forwards;
+}
+
+.rotate-close{
+  animation: rotate-arrow-close 1s 1 forwards;
+}
+
+.rotate-open{
+  animation: rotate-arrow-open 2s 1 forwards;
+}
+
+/*Animations classes*/
