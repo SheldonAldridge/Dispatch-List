@@ -19,11 +19,8 @@ nav{
   background-color: var(--Solid--Blue--colour);
   height:100vh;
   z-index: 1;
-  
   overflow: hidden;
 }
-
-
 
 ul {
   list-style: none;
@@ -77,6 +74,36 @@ header h1,header p{
 
 header p{
   border: var(--black--colour) 1px solid;
+}
+
+main{
+  width: 100%;
+}
+
+#district-watch {
+  height: 100vh;
+}
+.center-content{
+  text-align: center;
+}
+
+.center-content p{
+  text-align: center;
+  border: var(--white--colour) 1px solid;
+}
+
+#district-watch img{
+  max-width:10%;
+  height: auto;
+  padding-bottom: 1em;
+}
+
+#district-watch h5{
+  color: var(--white--colour);
+}
+
+.car-area-container{
+  max-width: 100%;
 }
 
 /*Animations Keyframe*/

@@ -21,4 +21,6 @@ navButton.addEventListener('click', () =>{
         arrowOpen.classList.add('rotate-open');
         arrowOpen.classList.remove('rotate-close');
     }
+
 })
+
