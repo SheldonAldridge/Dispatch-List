@@ -10,19 +10,18 @@
 }
 
 .container-fluid{
-  flex-wrap: nowrap;
   display: flex;
+  flex-wrap: nowrap;
   padding-left: 0 !important;
-  --bs-gutter-x: 0 !important;
   
 }
 
 nav{
   background-color: var(--Solid--Blue--colour);
-  height:100vh;
+  height:auto;
   width: 10vw;
   z-index: 2;
-  overflow: hidden;
+  
 }
 
 ul {
@@ -47,38 +46,32 @@ li img{
   cursor: grab;
 }
 
-#toggle-menu{
-  margin: 25em 10em;
+.toggle-menu{
+  margin: 25em -0.5em;
   max-width:100%;
   width:6%;
-  position: absolute;
   z-index: 1;
 }
 
 .btn-dark{
   width:3vw;
   height: 10vh;
+  
 }
 
 .btn-dark img{
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(22deg) brightness(103%) contrast(102%);
-  text-align: center;
   width:3vw;
 }
 
-.dropzone{
-  max-width: 100%;
-}
-
-
-#drag-container{
-  width: 100%;
+#drag-container {
   opacity: 0.3;
-  
+  width: 100%;
+  text-align: center;
 }
 
 #drag-container h1{
- text-align: center;
+ 
  margin-top: 1em;
 }
 
@@ -230,12 +223,8 @@ main{
 
 /*Dragging classes*/
 
-
-
-
 .dragover{
   width:20%;
-  
 }
 
 /*Dragging classes*/

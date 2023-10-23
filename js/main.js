@@ -27,7 +27,6 @@ navButton.addEventListener('click', () =>{
         menutoggle.classList.add('open-nav-btn');
         menutoggle.classList.remove('close-nav-btn');
     }
-
 })
 
 //drag and Drop logo's
@@ -70,6 +69,7 @@ dragover.addEventListener('drop', (event) =>{
        
     }
 
-    console.log("logo dropped")
+    console.log("logo dropped");
 })
 
+//Add cars to data types for Logo's
