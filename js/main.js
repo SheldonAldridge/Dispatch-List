@@ -72,4 +72,9 @@ dragover.addEventListener('drop', (event) =>{
     console.log("logo dropped");
 })
 
-//Add cars to data types for Logo's
+//Armed Response data set functions
+
+function DistrictList(){
+    
+}
+
