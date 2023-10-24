@@ -65,10 +65,9 @@ dragover.addEventListener('drop', (event) =>{
     if(event.target.className === 'dropzone'){
         dragged.parentNode.removeChild(dragged)
         event.target.appendChild(dragged)
-
-       
     }
 
+    DistrictList()
     console.log("logo dropped");
 })
 
@@ -76,5 +75,15 @@ dragover.addEventListener('drop', (event) =>{
 
 function DistrictList(){
     
+    const dispatchParent = document.querySelector('#dispatch-list')
+
+    const divEl = document.createElement('div');
+    divEl.className = "bg-primary";
+    
+    dispatchParent.appendChild(divEl)
+
+    
 }
+
+
 
