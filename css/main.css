@@ -29,7 +29,7 @@ ul {
   
 }
 
-.list-group-item{
+li{
   margin-top: 5em;
   max-width: 100%;
   height: auto;
@@ -44,10 +44,10 @@ li img{
 }
 
 .toggle-menu{
-  margin: 25em auto;
+  margin: em auto;
   max-width:100%;
   width:6%;
-  position: absolute;
+  
 }
 
 .btn-dark{
@@ -81,8 +81,14 @@ li img{
   padding-left: 3em;
 }
 
+#dispatch-list{
+  max-width: 100%;
+  
+}
+
 #district-watch {
   height: 100vh;
+  width:100%;
 }
 
 .center-content{
