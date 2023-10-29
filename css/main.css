@@ -39,6 +39,7 @@ li img{
   height: auto; 
   transition: width 1s ease;
   cursor: grab;
+
 }
 
 .toggle-menu{
@@ -46,6 +47,7 @@ li img{
   max-width:100%;
   width:6%;
   position: absolute;
+  z-index: 1;
 }
 
 .btn-dark{
@@ -75,24 +77,23 @@ li img{
   width: 80%;
 }
 
+.drop-hide{
+  display: none;
+}
+
 #close{
-  padding-left: 3em;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(22deg) brightness(103%) contrast(102%);
   cursor: pointer;
   float: right;
   padding-right: 1em;
 }
 
-#dispatch-list{
-  width: 89%;
+.dispatch-list{
+  max-width: auto;
 }
 
-.bg-primary{
-width: 100vw;
-}
-
-#district-container{
-  width: 100vw;
+.district-container{
+  width: auto;
 }
 
 #district-watch {
@@ -110,7 +111,7 @@ width: 100vw;
 }
 
 #district-watch img{
-  max-width:10%;
+  max-width:20%;
   height: auto;
   padding-bottom: 1em;
   padding-top: 1em;
@@ -118,6 +119,10 @@ width: 100vw;
 
 #district-watch h5{
   color: var(--white--colour);
+}
+
+#district-hide{
+  display: none;
 }
 
 .car-area-container{
@@ -199,6 +204,16 @@ width: 100vw;
   }
 }
 
+@keyframes transformAppear{
+  0%{
+    transform: scale(0);
+   }
+ 
+   100%{
+     transform: scale(1);
+   }
+}
+
 /*Animations Keyframe*/
 
 /*Animations classes*/
@@ -228,6 +243,10 @@ width: 100vw;
 
 .drag-start{
   animation: drag-start 0.5s 1 forwards;
+}
+
+.transformAppear{
+  animation: transformAppear 0.5s 1 forwards;
 }
 
 /*Animations classes*/

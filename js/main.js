@@ -29,7 +29,7 @@ navButton.addEventListener('click', () =>{
     }
 })
 
-const arCarsArray = []
+const arArray = []
 
 //drag and Drop logo's
 
@@ -67,10 +67,10 @@ dragover.addEventListener('drop', (event) =>{
     if(event.target.className === 'dropzone'){
         dragged.parentNode.removeChild(dragged)
         event.target.appendChild(dragged)
-        DistrictList()
+        
     }
 
-    
+    DistrictList()
     console.log("logo dropped");
 })
 
@@ -78,12 +78,48 @@ dragover.addEventListener('drop', (event) =>{
 
 function DistrictList(){
     
-    const dispatchParent = document.querySelector('#dispatch-list')
+    const dispatchParent = document.querySelector('.dispatch-list')
     
     const districtContainerEl = document.createElement('div');
-    districtContainerEl.className = "district-container";
+    districtContainerEl.classList.add('district-container');
+    districtContainerEl.classList.add('transformAppear');
+    districtContainerEl.setAttribute('id', 'district-hide');
+
+    districtContainerEl.innerHTML = `
+    <div class="bg-primary" id="district-watch">
+
+    <img
+      src="./resources/Icons/close.svg"
+      class="img-fluid"
+      id="close"
+      alt="close-icon"
+    />
+
+  <div class="center-content">
     
-    dispatchParent.appendChild(divEl)
+    <img
+      src="./resources/images/District Watch.png"
+      class="img-fluid"
+      alt="District Watch Logo"
+      draggable="false"
+    />
+
+    <h5>District Watch Armed Response</h5>
+    <p></p>
+    <div class="car-area-container"></div>
+  </div>
+
+</div>`;
+
+        const removeDrgDrp = document.querySelector('#drag-container')
+        
+        districtContainerEl.removeAttribute('id', 'district-hide')
+
+        dispatchParent.appendChild(districtContainerEl)
+
+
+
+    console.log("District Function triggered")
     
 }
 
