@@ -11,9 +11,7 @@
 
 .container-fluid{
   display: flex;
-  flex-wrap: wrap;
   padding: 0 !important;
- 
 }
 
 nav{
@@ -44,10 +42,10 @@ li img{
 }
 
 .toggle-menu{
-  margin: em auto;
+  margin: 25em auto;
   max-width:100%;
   width:6%;
-  
+  position: absolute;
 }
 
 .btn-dark{
@@ -79,16 +77,27 @@ li img{
 
 #close{
   padding-left: 3em;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(22deg) brightness(103%) contrast(102%);
+  cursor: pointer;
+  float: right;
+  padding-right: 1em;
 }
 
 #dispatch-list{
-  max-width: 100%;
-  
+  width: 89%;
+}
+
+.bg-primary{
+width: 100vw;
+}
+
+#district-container{
+  width: 100vw;
 }
 
 #district-watch {
   height: 100vh;
-  width:100%;
+  width: auto;
 }
 
 .center-content{
@@ -104,6 +113,7 @@ li img{
   max-width:10%;
   height: auto;
   padding-bottom: 1em;
+  padding-top: 1em;
 }
 
 #district-watch h5{
