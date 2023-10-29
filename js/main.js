@@ -29,6 +29,8 @@ navButton.addEventListener('click', () =>{
     }
 })
 
+const arCarsArray = []
+
 //drag and Drop logo's
 
 let dragged = null
@@ -65,9 +67,10 @@ dragover.addEventListener('drop', (event) =>{
     if(event.target.className === 'dropzone'){
         dragged.parentNode.removeChild(dragged)
         event.target.appendChild(dragged)
+        DistrictList()
     }
 
-    DistrictList()
+    
     console.log("logo dropped");
 })
 
@@ -76,12 +79,11 @@ dragover.addEventListener('drop', (event) =>{
 function DistrictList(){
     
     const dispatchParent = document.querySelector('#dispatch-list')
-
-    const divEl = document.createElement('div');
-    divEl.className = "bg-primary";
+    
+    const districtContainerEl = document.createElement('div');
+    districtContainerEl.className = "district-container";
     
     dispatchParent.appendChild(divEl)
-
     
 }
 
