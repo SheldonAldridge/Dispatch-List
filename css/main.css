@@ -89,15 +89,19 @@ li img{
 }
 
 .dispatch-list{
-  max-width: auto;
+  display: grid;
+  grid-template-columns: auto;
+  width: 100%;
 }
 
-.district-container{
-  width: auto;
+.dispatch-hide{
+  display: none;
 }
+
+
 
 #district-watch {
-  height: 100vh;
+  height: 100%;
   width: auto;
 }
 
@@ -111,7 +115,7 @@ li img{
 }
 
 #district-watch img{
-  max-width:20%;
+  max-width:10%;
   height: auto;
   padding-bottom: 1em;
   padding-top: 1em;
@@ -127,6 +131,17 @@ li img{
 
 .car-area-container{
   max-width: 100%;
+  
+}
+
+.table>:not(caption)>*>* {
+  background-color: transparent !important;
+  border-bottom-width: transparent !important;
+}
+
+td, tr{
+  color: var(--white--colour) !important;
+  font-size: 30px;
 }
 
 /*Animations Keyframe*/

@@ -6,6 +6,8 @@ const arrowOpen = document.querySelector('#arrow');
 const menutoggle = document.querySelector('#toggle-menu');
 let isOpen = false
 
+
+
 navButton.addEventListener('click', () =>{
 
     isOpen = !isOpen
@@ -29,7 +31,7 @@ navButton.addEventListener('click', () =>{
     }
 })
 
-const arArray = []
+
 
 //drag and Drop logo's
 
@@ -67,26 +69,27 @@ dragover.addEventListener('drop', (event) =>{
     if(event.target.className === 'dropzone'){
         dragged.parentNode.removeChild(dragged)
         event.target.appendChild(dragged)
-        
     }
+    
 
-    DistrictList()
-    console.log("logo dropped");
+    districtList()
 })
+
 
 //Armed Response data set functions
 
-function DistrictList(){
-    
+function districtList(){
     const dispatchParent = document.querySelector('.dispatch-list')
-    
+    dispatchParent.classList.remove('dispatch-hide');
+
     const districtContainerEl = document.createElement('div');
     districtContainerEl.classList.add('district-container');
     districtContainerEl.classList.add('transformAppear');
+    
     districtContainerEl.setAttribute('id', 'district-hide');
 
     districtContainerEl.innerHTML = `
-    <div class="bg-primary" id="district-watch">
+    <div class="bg-primary dropzone" id="district-watch">
 
     <img
       src="./resources/Icons/close.svg"
@@ -106,22 +109,62 @@ function DistrictList(){
 
     <h5>District Watch Armed Response</h5>
     <p></p>
-    <div class="car-area-container"></div>
+    <div class="car-area-container" id = "custom-table"></div>
   </div>
 
 </div>`;
 
         const removeDrgDrp = document.querySelector('#drag-container')
+        removeDrgDrp.style.display="none";
         
         districtContainerEl.removeAttribute('id', 'district-hide')
 
         dispatchParent.appendChild(districtContainerEl)
 
+        const carareaContainer = document.querySelector('.car-area-container')
+       
+        const dwArea = ["DW1","DW2","DW3","DW4","DW5","DW6"]
+        const tableHeadingarray = ["Area","Car 1", "Car 2", "Car 3"]
+        const dwcars = ["RR1","RR2", "RR3", "RR4","RR5", "RR6", "RR7","RR8", "RR9", "RR10","RR11", "RR12"]
+
+
+        const tableEl = document.createElement('table');
+        tableEl.classList.add('table');
+
+        const theadEl = document.createElement('thead');
+        const trEl = document.createElement('tr');
+        const thEl = document.createElement('th');
+
+        for (let i = 0; i < tableHeadingarray.length; i++) {
+            
+            const thEl = document.createElement('th');
+            thEl.textContent = tableHeadingarray[i]
+            trEl.appendChild(thEl);
+        }
+
+        const tbodyEl = document.createElement('tbody');
+        
+
+        for (let a = 0; a < dwArea.length; a++) {
+
+            const trEltwo = document.createElement('tr');
+            const thEltwo = document.createElement('th');
+
+            tbodyEl.appendChild(trEltwo);
+            
+            trEltwo.textContent = dwArea[a]
+            trEl.appendChild(thEl);
+        }
+
+
+        tableEl.appendChild(theadEl);
+        theadEl.appendChild(trEl);
+        tableEl.appendChild(tbodyEl);
+        carareaContainer.appendChild(tableEl);
+        console.log(tableEl)
 
 
     console.log("District Function triggered")
-    
 }
-
 
 
