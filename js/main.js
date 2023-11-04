@@ -38,7 +38,6 @@ navButton.addEventListener('click', () =>{
 let dragged = null
 
 const logos = document.querySelectorAll('li img');
-console.log(logos)
 
 logos.forEach(logo =>{
 
@@ -71,7 +70,6 @@ dragover.addEventListener('drop', (event) =>{
         event.target.appendChild(dragged)
     }
     
-
     districtList()
 })
 
@@ -123,48 +121,74 @@ function districtList(){
 
         const carareaContainer = document.querySelector('.car-area-container')
        
-        const dwArea = ["DW1","DW2","DW3","DW4","DW5","DW6"]
-        const tableHeadingarray = ["Area","Car 1", "Car 2", "Car 3"]
-        const dwcars = ["RR1","RR2", "RR3", "RR4","RR5", "RR6", "RR7","RR8", "RR9", "RR10","RR11", "RR12"]
-
+        
+        //Array for table headings
+        const tableHeadingarray = ["Area","Car 1", "Car 2", "Car 3"];
 
         const tableEl = document.createElement('table');
         tableEl.classList.add('table');
 
         const theadEl = document.createElement('thead');
         const trEl = document.createElement('tr');
-        const thEl = document.createElement('th');
+        
 
         for (let i = 0; i < tableHeadingarray.length; i++) {
             
             const thEl = document.createElement('th');
+            thEl.setAttribute('scope', 'col');
             thEl.textContent = tableHeadingarray[i]
             trEl.appendChild(thEl);
         }
 
+     
+        //Array for District Watch area
+        const dwArea = ["DW1","DW2","DW3","DW4","DW5","DW6"];
+        //List of District Watch Cars
+        const dwcars = [" ","RR1","RR2", "RR3", "RR4","RR5", "RR6", "RR7","RR8", "RR9", "RR10","RR11", "RR12"];
+
         const tbodyEl = document.createElement('tbody');
         
-
         for (let a = 0; a < dwArea.length; a++) {
 
             const trEltwo = document.createElement('tr');
-            const thEltwo = document.createElement('th');
+           
+            
+            for (let s = 0; s < tableHeadingarray.length; s++) {
 
+                const thEltwo = document.createElement('th');
+                const selEl = document.createElement('select');
+                const tdEl = document.createElement('td');
+                
+                thEltwo.appendChild(tdEl);
+                tdEl.appendChild(selEl);
+
+                //console.log(thEltwo);
+
+                for (let c = 0; c < dwcars.length; c++){
+                    const optEl = document.createElement('option');
+                    optEl.append(dwcars[c]);
+                    selEl.appendChild(optEl);
+                }
+
+                trEltwo.appendChild(thEltwo)
+                
+            }
+            
+            const districtTd = document.createElement('td');
+            districtTd.textContent = dwArea[a];
+            trEltwo.appendChild(districtTd);
+        
             tbodyEl.appendChild(trEltwo);
             
-            trEltwo.textContent = dwArea[a]
-            trEl.appendChild(thEl);
         }
-
 
         tableEl.appendChild(theadEl);
         theadEl.appendChild(trEl);
         tableEl.appendChild(tbodyEl);
+        
         carareaContainer.appendChild(tableEl);
         console.log(tableEl)
 
-
-    console.log("District Function triggered")
 }
 
 
