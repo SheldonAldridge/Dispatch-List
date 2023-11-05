@@ -81,6 +81,8 @@ li img{
   display: none;
 }
 
+
+
 #close{
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(22deg) brightness(103%) contrast(102%);
   cursor: pointer;
@@ -136,13 +138,22 @@ li img{
 
 .table>:not(caption)>*>* {
   background-color: transparent !important;
-  border-bottom-width: transparent !important;
+  border: transparent !important;
 }
 
-td, tr{
+
+td, tr,th{
   color: var(--white--colour) !important;
   font-size: 30px;
+  justify-content: center !important;
 }
+
+select{
+  color: var(--white--colour);
+  background-color: var(--Solid--Blue--colour) !important;
+  border-color: transparent !important;
+}
+
 
 /*Animations Keyframe*/
 
