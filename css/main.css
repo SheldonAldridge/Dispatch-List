@@ -81,7 +81,9 @@ li img{
   display: none;
 }
 
-
+.basset-primary{
+  background-color: var(--orange--colour);
+}
 
 #close{
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(22deg) brightness(103%) contrast(102%);
@@ -99,8 +101,6 @@ li img{
 .dispatch-hide{
   display: none;
 }
-
-
 
 #district-watch {
   height: 100%;
@@ -240,6 +240,17 @@ select{
    }
 }
 
+@keyframes transformRemove{
+  0%{
+    transform: scale(1);
+   }
+ 
+   100%{
+     transform: scale(0);
+     display: none;
+   }
+}
+
 /*Animations Keyframe*/
 
 /*Animations classes*/
@@ -273,6 +284,10 @@ select{
 
 .transformAppear{
   animation: transformAppear 0.5s 1 forwards;
+}
+
+.transformRemove{
+  animation: transformRemove 0.5s 1 forwards;
 }
 
 /*Animations classes*/

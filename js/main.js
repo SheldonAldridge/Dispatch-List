@@ -39,37 +39,45 @@ let dragged = null
 
 const logos = document.querySelectorAll('li img');
 
-logos.forEach(logo =>{
+logos.forEach(logo => {
+    const dataType = logo.getAttribute('data-type');
 
     logo.addEventListener('dragstart', (event) =>{
-    event.target.classList.add('dragstart')
-    dragged = event.target
-})
+        event.target.classList.add('dragstart')
+        dragged = event.target
 
-logo.addEventListener('drag', (event) =>{
-    event.target.classList.add('drag-start')
-    dragged = event.target
-})
+        dragged.dataset.type = dataType
+    });
 
-})
+    logo.addEventListener('dragend', () => {
+        dragged = null;
+     });
+
+});
 
 const dragover = document.getElementById('drag-container');
 
 dragover.addEventListener('dragover', (event) =>{
-    event.target.classList.add('dragover')
-    event.target.classList.add('dragover')
     event.preventDefault();
 })
 
-dragover.addEventListener('drop', (event) =>{
-
-    if(event.target.className === 'dropzone'){
-        dragged.parentNode.removeChild(dragged)
-        event.target.appendChild(dragged)
+dragover.addEventListener('drop', (event) => {
+    // Ensure that this is a valid drop zone
+    if (event.target.className === 'dropzone') {
+      // Check if an image was dragged and dropped
+      if (dragged) {
+        // Check the data-type attribute of the dragged element
+        const dataType = dragged.dataset.type;
+        if (dataType === 'dw-response') {
+          districtList();
+        }
+  
+        dragged.parentNode.removeChild(dragged);
+        event.target.appendChild(dragged);
+        
+      }
     }
-   
-    districtList()
-})
+  });
 
 
 //Armed Response data set functions
@@ -159,10 +167,7 @@ function districtList(){
 
             trEl.appendChild(disTD);
 
-            
-            console.log(disTD);
-           
-            
+        
             for (let s = 0; s < tableHeadingarray.length - 1; s++) {
 
                 const tdEl = document.createElement('td');
@@ -171,7 +176,6 @@ function districtList(){
                 trEl.append(tdEl)
                 tdEl.appendChild(selEl)
 
-                console.log(tdEl);
 
                 for (let c = 0; c < dwcars.length; c++){
                     const optEl = document.createElement('option');
@@ -190,7 +194,26 @@ function districtList(){
         tableEl.appendChild(tbodyEl);
         
         carareaContainer.appendChild(tableEl);
-        arCarsArray.push(carareaContainer);
+
+        const closebtn = document.querySelector('#close');
+
+        closebtn.addEventListener("click", (event) => {
+            dispatchParent.classList.add('transformRemove');
+            
+            if(dispatchParent.classList.contains('transformRemove'))
+            setTimeout(() => {
+                removeDrgDrp.style.display="block";
+              }, "500");
+            
+          
+            if(dragged && dragged.classList.contains('drag-start')) {
+                dragged.classList.remove('drag-start')
+            }
+            
+            console.log("closed button pressed")
+        })
+
 }
+
 
 console.log(arCarsArray)
