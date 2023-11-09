@@ -35,7 +35,15 @@ navButton.addEventListener('click', () =>{
 arCarsArray = []
 //drag and Drop logo's
 
+const dispatchParent = document.querySelector('.dispatch-list')
+
+arCarsArray.forEach(cars => {
+  
+  
+});
+
 let dragged = null
+let originalLocation = null;
 
 const logos = document.querySelectorAll('li img');
 
@@ -45,6 +53,8 @@ logos.forEach(logo => {
     logo.addEventListener('dragstart', (event) =>{
         event.target.classList.add('dragstart')
         dragged = event.target
+
+        dragged = dragged.parentNode;
 
         dragged.dataset.type = dataType
     });
@@ -73,7 +83,6 @@ dragover.addEventListener('drop', (event) => {
         }
   
         dragged.parentNode.removeChild(dragged);
-        event.target.appendChild(dragged);
         
       }
     }
@@ -207,7 +216,8 @@ function districtList(){
             
           
             if(dragged && dragged.classList.contains('drag-start')) {
-                dragged.classList.remove('drag-start')
+                dragged.classList.add('dragstart')
+                console.log(dragged)
             }
             
             console.log("closed button pressed")
