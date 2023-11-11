@@ -215,8 +215,8 @@ function districtList(){
               }, "500");
             
           
-            if(dragged && dragged.classList.contains('drag-start')) {
-                dragged.classList.add('dragstart')
+            if(dragged && dragged.classList.contains('dragstart')) {
+                dragged.classList.remove('dragstart')
                 console.log(dragged)
             }
             
