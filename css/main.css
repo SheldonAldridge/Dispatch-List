@@ -72,7 +72,6 @@ li img{
 
 #drag-container p{
   border: var(--black--colour) 1px solid;
-  opacity: 0.3;
   margin: auto;
   width: 80%;
 }
