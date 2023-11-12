@@ -1,60 +1,22 @@
-//button click to toggle navbar to open/close
-
-const navButton = document.querySelector('.btn-dark');
-const navbar = document.querySelector('nav');
-const arrowOpen = document.querySelector('#arrow');
-const menutoggle = document.querySelector('#toggle-menu');
-let isOpen = false
-
-
-
-navButton.addEventListener('click', () =>{
-
-    isOpen = !isOpen
-    
-    if(isOpen){
-        navbar.classList.add('close-nav');
-        navbar.classList.remove('open-nav');
-        arrowOpen.classList.add('rotate-close');
-        arrowOpen.classList.remove('rotate-open');
-        menutoggle.classList.add('close-nav-btn');
-        menutoggle.classList.remove('open-nav-btn');
-        
-    }
-    else{
-        navbar.classList.add('open-nav');
-        navbar.classList.remove('close-nav');
-        arrowOpen.classList.add('rotate-open');
-        arrowOpen.classList.remove('rotate-close');
-        menutoggle.classList.add('open-nav-btn');
-        menutoggle.classList.remove('close-nav-btn');
-    }
-})
-
-
-const arCarsArray = []
-const listArray = []
-//drag and Drop logo's
-
-const dispatchParent = document.querySelector('.dispatch-list')
-const logos = document.querySelectorAll('li img');
-
 logos.forEach(logo => {
-  const dataType = logo.getAttribute('data-type');
+    const dataType = logo.getAttribute('data-type');
 
-  logo.addEventListener('dragstart', (event) =>{
-      event.target.classList.add('dragstart')
-      dragged = event.target
-      dragged = dragged.parentNode;
-      dragged.dataset.type = dataType
-      listArray.push(dragged)
-  });
+    logo.addEventListener('dragstart', (event) =>{
+        event.target.classList.add('dragstart')
+        dragged = event.target
+        dragged = dragged.parentNode;
+        dragged.dataset.type = dataType
 
-  logo.addEventListener('dragend', () => {
-      dragged = null;
-   });
+        listArray.push(dragged)
+    });
+
+    logo.addEventListener('dragend', () => {
+        dragged = null;
+     });
 
 });
+
+console.log(listArray)
 
 const dragover = document.getElementById('drag-container');
 
@@ -72,35 +34,24 @@ dragover.addEventListener('drop', (event) => {
         if (dataType === 'dw-response') {
           //arCarsArray.push(districtList);
           districtList()
-          console.log(dataType)
+        
         }
-
         if (dataType === 'basset-response') {
-          //arCarsArray.push(bassetList);
-          //bassetList()
-          console.log(dataType)
-        }
-
-        if (dataType === 'cbar-response') {
-          //arCarsArray.push(bassetList);
-          //bassetList()
-          console.log(dataType)
-        }
-
-        if (dataType === 'vigilant-response') {
-          //arCarsArray.push(bassetList);
-          //bassetList()
-          console.log(dataType)
+          arCarsArray.push(bassetList);
+          bassetList()
+          console.log(arCarsArray)
         }
   
         dragged.parentNode.removeChild(dragged);
-        console.log(listArray)
+        
       }
     }
   });
 
 
-  function districtList(){
+//Armed Response data set functions
+
+function districtList(){
     const dispatchParent = document.querySelector('.dispatch-list')
     dispatchParent.classList.remove('dispatch-hide');
     dispatchParent.classList.add('dropzone');
@@ -232,5 +183,139 @@ dragover.addEventListener('drop', (event) => {
             
             console.log("closed button pressed")
         })
+
+}
+
+function bassetList(){
+  const dispatchParent = document.querySelector('.dispatch-list')
+  dispatchParent.classList.remove('dispatch-hide');
+  dispatchParent.classList.add('dropzone');
+
+  const districtContainerEl = document.createElement('div');
+  districtContainerEl.classList.add('basset-container');
+  districtContainerEl.classList.add('transformAppear');
+  
+  districtContainerEl.setAttribute('id', 'district-hide');
+
+  districtContainerEl.innerHTML = `
+  <div class="bg-primary dropzone" id="basset">
+
+  <img
+    src="./resources/Icons/close.svg"
+    class="img-fluid"
+    id="close"
+    alt="close-icon"
+  />
+
+<div class="center-content">
+  
+  <img
+    src="./resources/images/District Bassett.jpg.png"
+    class="img-fluid"
+    alt="District Watch Logo"
+    draggable="false"
+  />
+
+  <h5>District Basset Armed Response</h5>
+  <p></p>
+  <div class="car-area-container" id = "custom-table"></div>
+</div>
+
+</div>`;
+
+      const removeDrgDrp = document.querySelector('#drag-container')
+      removeDrgDrp.style.display="none";
+      
+      districtContainerEl.removeAttribute('id', 'district-hide')
+
+      dispatchParent.appendChild(districtContainerEl)
+
+      const carareaContainer = document.querySelector('.car-area-container')
+     
+      
+      //Array for table headings
+      const tableHeadingarray = ["Area","Car 1", "Car 2", "Car 3"];
+
+      const tableEl = document.createElement('table');
+      tableEl.classList.add('table');
+
+      const theadEl = document.createElement('thead');
+      const trEl = document.createElement('tr');
+      
+
+      for (let i = 0; i < tableHeadingarray.length; i++) {
+          
+          const thEl = document.createElement('th');
+          thEl.setAttribute('scope', 'col');
+          thEl.textContent = tableHeadingarray[i]
+          trEl.appendChild(thEl);
+      }
+
+      
+      //Array for Basset area
+      const dwArea = ["DB1","DB2","DB3","DB4","DB5","DB6","DB7","DB8"];
+      //List of Basset Cars Array
+      const dwcars = [" ","BR1","BR2", "BR3", "BR4","BR5", "BR6", "BR7","BR8", "BR9", "BR10","BR11", "BR12", "BR13"];
+
+      const tbodyEl = document.createElement('tbody');
+      
+      for (let a = 0; a < dwArea.length; a++) {
+
+          const trEl = document.createElement('tr');
+
+          const disTD = document.createElement('th');
+
+          disTD.setAttribute('scope', 'row');
+
+          disTD.textContent = dwArea[a];
+
+          trEl.appendChild(disTD);
+
+      
+          for (let s = 0; s < tableHeadingarray.length - 1; s++) {
+
+              const tdEl = document.createElement('td');
+              const selEl = document.createElement('select');
+              
+              trEl.append(tdEl)
+              tdEl.appendChild(selEl)
+
+
+              for (let c = 0; c < dwcars.length; c++){
+                  const optEl = document.createElement('option');
+                  optEl.append(dwcars[c]);
+                  selEl.appendChild(optEl);
+              }
+
+          }
+      
+          tbodyEl.appendChild(trEl);
+          
+      }
+      
+      tableEl.appendChild(theadEl);
+      theadEl.appendChild(trEl);
+      tableEl.appendChild(tbodyEl);
+      
+      carareaContainer.appendChild(tableEl);
+
+      const closebtn = document.querySelector('#close');
+
+      closebtn.addEventListener("click", (event) => {
+          dispatchParent.classList.add('transformRemove');
+          
+          if(dispatchParent.classList.contains('transformRemove'))
+          setTimeout(() => {
+              removeDrgDrp.style.display="block";
+            }, "500");
+          
+        
+          if(dragged && dragged.classList.contains('dragstart')) {
+              dragged.classList.remove('dragstart')
+              console.log(dragged)
+          }
+          
+          console.log("closed button pressed")
+      })
 
 }
